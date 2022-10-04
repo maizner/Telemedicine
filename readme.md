@@ -11,33 +11,34 @@ Frontend with Bootstrap grid + Gulp + Sass
 
 <a name="Structure"></a> Structure
 ------
+
 This is how the project structure looks like:
 
 
 ```
 Telemedicine/
 │
-│
+├── fonts/                     # Compiled, production-ready output
+├── img/                     # npm install                   # Source code; these are the only files you need to touch 
 ├── css/                     # Compiled, production-ready output
-├── node_modules/             # npm install
 ├── scss/                      # Source code; these are the only files you need to touch 
 │   │ 
 │   ├── fonts/                # Project fonts; Overpass font is included by default
-│   ├── images/               # Images folder; can have subdirectories
-│   ├── scripts/              # Scripts folder; can have subdirectories
+│   ├── img/               # Images folder; can have subdirectories
+│   ├── js/              # Scripts folder; can have subdirectories
 │   ├── scss/                 # Sass folder; more information below
-│   ├── views/                # Nunjucks templates; more information below
-│   ├── vendors/              # Complete 3rd party for the project
-│   └── data.json             # JSON data; used to populate Nunjucks templates
+│   ├── vendor/              # 3rd party for the project
+├── js/                      # Source code; these are the only files you need to touch 
+│   │ 
+│   ├── script/                # Project fonts; Overpass font is included by default
+│   ├── vendor/              # 3rd party for the project
+│  
 │
 │
 └── package.json              # List of 3rd party libraries and utilities
 └── page.html              # html
 ```  
 
-
-
-This boilerplate uses Sass as its CSS preprocessor. To keep our code clean and DRY (Don't Repeat Yourself), we split our Sass code into multiple files and folders. This boilerplate is based on the [Sass Guidelines architecture](https://sass-guidelin.es/#architecture "Sass Guidelines")
 
 Our Sass folder structure looks like this:
 
@@ -98,28 +99,11 @@ scss/
 
 <a name="dependencies"></a>Dependencias
 ------  
-A list of all the dependencies used in this project and a brief explanation for what it is used.  
+A list of all the dependencies used in this project 
 ### NPM
 * [`autoprefixer`](https://github.com/postcss/autoprefixer "autoprefixer"): Automatically adds vendor prefixes to CSS rules.  
-* [`del`](https://github.com/sindresorhus/del "del"): Deletes files and folders. In this case the `dist/` folder whenever you run the `gulp`  command.   
 * [`gulp`](http://gulpjs.com/ "gulp"): Build system that automates common tasks during development.
-* [`gulp-cache`](https://github.com/jgable/gulp-cache "gulp-cache"): Caches result of a task. 
-* [`gulp-concat`](https://github.com/contra/gulp-concat "gulp-concat"): Concatenates multiple files into one.
-* [`gulp-data`](https://github.com/colynb/gulp-data "gulp-data"): Generates the data obect, used in Nunjucks templates
-* [`gulp-cssnano`](http://cssnano.co/ "gulp-cssnano"): Minifies and optimizes CSS ( If needed)
-* [`gulp-if`](https://github.com/robrich/gulp-if "gulp-if"): Conditionally run tasks.
-* [`gulp-imagemin`](https://github.com/sindresorhus/gulp-imagemin "gulp-imagemin"): Optimizes images - PNG, JPG, GIF and SVG.  
-* [`gulp-jshint`](https://github.com/spalger/gulp-jshint "gulp-jshint"): Gulp plugin for JSHint. Lints JavaScript errors. 
-* [`gulp-nunjucks-render`](https://github.com/carlosl/gulp-nunjucks-render "gulp-nunjucks-render"): Render Nunjucks templates.
-* [`gulp-plumber`](https://github.com/floatdrop/gulp-plumber "gulp-plumber"): Prevents pipe breaking caused by errors from gulp plugins.
-* [`gulp-postcss`]( "gulp-postcss"): Pipe CSS through several preprocessors (`autoprefixer`, `cssnano`), but only parse it once.
-* [`gulp-purgecss`](https://github.com/FullHuman/gulp-purgecss "gulp-purgecss"): Removes unused CSS. Great for cleaning up external resources (e.g. Bootstrap, Font Awesome).  
 * [`gulp-sass`](https://github.com/dlmanning/gulp-sass "gulp-sass"): Compiles Sass to CSS with [`libSass`](https://github.com/sass/libsass "libsass").
-* [`gulp-size`](https://github.com/sindresorhus/gulp-size "gulp-size"): Display the size of the compiled output in your command line/terminal. 
-* [`gulp-sourcemaps`](https://github.com/floridoo/gulp-sourcemaps "gulp-sourcemaps"): Adds inline or external source maps. Useful when debugging compressed code. 
-* [`gulp-uglify`](https://github.com/terinjokes/gulp-uglify "gulp-uglify"): Minifies JavaScript. 
-* [`gulp-useref`](https://github.com/jonkemp/gulp-useref "gulp-useref"): Concatenates files between `build` blocks in your HTML.
-* [`jshint`](https://github.com/jshint/jshint "jshint"): Detects errors in your JavaScript code.
-* [`lazypipe`](https://github.com/OverZealous/lazypipe "lazypipe"): Allows you to create a lazily-initialized pipeline.
+* [`gulp-postcss`]( "gulp-postcss"): Pipe CSS through multiple preprocessors (`autoprefixer`, `cssnano`), but only parse it once.
 
 
