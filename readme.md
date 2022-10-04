@@ -93,14 +93,6 @@ scss/
 └── mainPage.scss             # Main Sass files. The main compiling files of each page (we will compile a main css file for page)
 
 ```
-> **Note**: You can modify this structure to your liking or your project needs. I highly suggest reading the [Sass Guidelines 7-1 pattern](https://sass-guidelin.es/#the-7-1-pattern "Sass Guidelines") if you want a more in-depth explanation.  
-
-### <a name="nunjucks"></a>Nunjucks
-With [Nunjucks](https://mozilla.github.io/nunjucks/ "Nunjucks") we can modularize our HTML files. In other words, we can break our HTML code in smaller pieces and reuse them freely throughout our project. Nunjucks also lets you use data to populate your markup.
-
-The key features of Nunjucks are **template inheritance**, **includes** (partials), **macros**, **logic - If / For / While** and **filters**. I will not be elaborating on these features since Nunjucks already has good [documentation available](https://mozilla.github.io/nunjucks/templating.html "Nunjucks templatings docs").
-
-Our Nunjucks folder structure looks like this: 
 
 
 
