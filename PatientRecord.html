@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Bienvenido a My ASSIST CARD!</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="css/vendor/bootstrap-4.3.1/bootstrap.css">
+		<link rel="stylesheet" href="css/PatientRecord.css">
+	
+		
+	</head>
+	<body>
+		<style>
+			.hero-bg{
+				background:  url(img/bg-login.jpg);	
+			}
+			
+		</style>
+		<div class="patient-record">
+			<section class="hero-section position-relative d-flex flex-column">
+				<div class="mask hero-bg"></div>
+				<!-- Esta mascara solo mostrarla si el usuario carga una imagen, sino por defaul esta display none-->
+				<div class="mask ac-mask-left"><div class="mask overlay-mask"></div></div>
+				<!-- Esta mascara solo mostrarla si el usuario carga una imagen-->
+				<section class="navigation">
+					<header>
+						<nav class="navbar navbar-default sm-nav navbar-expand-md " role="navigation">
+							<div class=" d-flex col-12 container-fluid margin-0 pt-1">
+								<div class="d-flex flex-column col-5 padding-0">
+								   	<a class="margin-0" href="#">
+								    	<img src="img/logo-b.png" width="192" height="51" alt="Assist Card">
+								  	</a>
+							  	</div>
+					
+							    <form class="login-btn-group ml-auto bg-image-form ">
+							    	<div >
+								      	<a href="#" class="logout">
+								      		<span class="pr-2">
+								      			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21">
+												    <path fill="#FFF" fill-rule="evenodd" d="M2.285 10.875L4.59 13.16c.117.13.176.28.176.45 0 .169-.059.318-.176.449a.89.89 0 0 1-.215.127.605.605 0 0 1-.234.048.605.605 0 0 1-.235-.048.89.89 0 0 1-.215-.127L0 10.269 3.691 6.48a.617.617 0 0 1 .898 0 .596.596 0 0 1 .177.44.596.596 0 0 1-.176.44L2.324 9.624h10.781c.183 0 .332.059.45.176a.608.608 0 0 1 .175.449.617.617 0 0 1-.625.625H2.285zM18.75.25c.339 0 .632.12.879.361S20 1.148 20 1.5V19c0 .352-.124.648-.371.889-.247.24-.54.361-.879.361H8.125c-.352 0-.648-.12-.889-.361A1.208 1.208 0 0 1 6.875 19v-5.645h1.25v4.883c0 .209.075.388.225.537.15.15.328.225.537.225h9.101a.701.701 0 0 0 .528-.225.75.75 0 0 0 .214-.537l-.02-15.976a.75.75 0 0 0-.214-.537.701.701 0 0 0-.527-.225H8.887a.733.733 0 0 0-.537.225.733.733 0 0 0-.225.537v4.863h-1.25V1.5c0-.352.12-.648.361-.889.241-.24.537-.361.889-.361H18.75z"/>
+												</svg>
+
+								      		</span>
+								      		Cerrar Sesión
+								      	</a>
+								      	<a href="#" class="user">
+								      		<img src="img/thumb55x55.jpg" alt=""  width="55" class="rounded-circle bordered thumb">
+								      	</a>
+								      	
+							      	</div>
+							    </form>
+						    </div>
+						  
+						</nav>
+					</header>
+				</section>
+			</section>
+				
+			<section class="file-form d-flex light-grey-bg">
+				<form action="" class="col-12 form d-flex">
+					<div class="col-8">
+						<div class=" mt-5">
+				      		<img src="img/thumb70x70.jpg" alt="lastname"  width="70" class="rounded-circle bordered thumb m-3 mt-4">
+				      	</div>
+						
+						<div class="d-flex flex-column">
+							<div class="container-large d-flex flex-wrap">
+								<div class="col-6">
+									<h2 class="title-6" >Datos Personales</h2>
+								</div>
+								<div class="col-6">
+									<h2 class="title-6" >Síntoma/ Localización</h2>
+								</div>
+							</div>
+							<div class="container-large d-flex align-items-strech">
+								<div class="col-6 blockx2 " >
+									<div class="form-grey-column " >
+										<div class="form-group minimal  focus">
+										    <label for="nameandlast">Nombre y apellido</label>
+										    <input type="text" class="form-control" id="nameandlast" placeholder="Nombre y apellido"
+										    value="Juan Ceré" readonly>
+										    <span class="message"></span>
+									    </div>
+
+										<div class="form-group minimal focus">
+										    <label for="doc">DNI</label>
+										    <input type="text" class="form-control" id="doc" placeholder="32165432" value="32165432" readonly>
+										    <span class="message"></span>
+									    </div>
+									    <div class="form-group minimal focus">
+										    <label for="doc">Domicilio</label>
+										    <input type="text" class="form-control" id="doc" placeholder="Calle, número y piso" value="Melian 264 3C" readonly>
+										    <span class="message"></span>
+									    </div>
+								    </div>
+								</div>
+								<div class="col-6 blockx2">
+									<div class="form-grey-column">
+										<div class="form-group minimal focus">
+										    <label for="sintoma">Síntoma</label>
+										    <input type="text" class="form-control" id="sintoma" placeholder="Síntoma" value="Dolor de garganta" readonly>
+										    <span class="message"></span>
+									    </div>
+										<div class="form-group minimal focus">
+										    <label for="univ">Ubicación</label>
+										    <input type="text" class="form-control" id="univ" placeholder="Unicación" value="Francisco Beiró 2036 1 C, Olivos, Vicente Lopez" readonly>
+										    <span class="message"></span>
+									    </div>
+										<div class="form-group minimal autocomplete focus">
+											<label for="graduat">Teléfono</label>
+											<input type="text" class="form-control" id="graduat" placeholder="Año" value="+55 4796 0378" readonly>
+											<span class="message"></span>
+										</div>
+
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						<div class="container text-right pt-5 sm-margin-y2 pb-5">
+							<button class=" btn md-btn mx-auto brand-color" type="submit">Llamar</button>
+						</div>
+					</div>
+					<div class="col-4 border-left pb-5" >
+						<h2  class="title-6 margintop100">Historial de consultas</h2>
+						<p class="grey-color t16">Ingrese a cada caso para obtener detalles</p>
+						<table id="history" class="table table-striped modal-striped-table table-borderless mt-5 mb-5">
+				
+						  <tbody>
+						    <tr id="0" data-toggle="modal" data-target="#historyModal">
+						      	<td width="50%" class="date">
+							      	12-10-2018
+								</td>
+								<td width="50%"  class="symptom">
+							      	Fiebre
+								</td>
+						    </tr>
+						     <tr id="1" data-toggle="modal" data-target="#historyModal">
+						      	<td width="50%" class="date">
+							      	12-10-2018
+								</td>
+								<td width="50%" class="symptom">
+							      	Dolor de garganta 
+								</td>
+						    </tr>
+						      <tr id="2" data-toggle="modal" data-target="#historyModal">
+						      	<td width="50%" class="date">
+							      	12-10-2018
+								</td>
+								<td width="50%"  class="symptom">
+							      	Fiebre
+								</td>
+						    </tr>
+						     <tr id="3" data-toggle="modal" data-target="#historyModal">
+						      	<td width="50%" class="date">
+							      	12-10-2018
+								</td>
+								<td width="50%" class="symptom">
+							      	Dolor de garganta 
+								</td>
+						    </tr>
+
+	  						<tr id="4" data-toggle="modal" data-target="#historyModal">
+						      	<td width="50%" class="date">
+							      	12-10-2018
+								</td>
+								<td width="50%"  class="symptom">
+							      	Fiebre
+								</td>
+						    </tr>
+						     <tr id="5" data-toggle="modal" data-target="#historyModal">
+						      	<td width="50%" class="date">
+							      	12-10-2018
+								</td>
+								<td width="50%" class="symptom">
+							      	Dolor de garganta 
+								</td>
+						    </tr>
+						      <tr id="6" data-toggle="modal" data-target="#historyModal">
+						      	<td width="50%" class="date">
+							      	12-10-2018
+								</td>
+								<td width="50%"  class="symptom">
+							      	Fiebre
+								</td>
+						    </tr>
+						     <tr id="7" data-toggle="modal" data-target="#historyModal">
+						      	<td width="50%" class="date">
+							      	12-10-2018
+								</td>
+								<td width="50%" class="symptom">
+							      	Dolor de garganta 
+								</td>
+						    </tr>
+						      <tr id="8" data-toggle="modal" data-target="#historyModal">
+						      	<td width="50%" class="date">
+							      	12-10-2018
+								</td>
+								<td width="50%"  class="symptom">
+							      	Fiebre
+								</td>
+						    </tr>
+						     <tr id="9" data-toggle="modal" data-target="#historyModal">
+						      	<td width="50%" class="date">
+							      	12-10-2018
+								</td>
+								<td width="50%" class="symptom">
+							      	Dolor de garganta 
+								</td>
+						    </tr>
+
+	  						<tr id="10" data-toggle="modal" data-target="#historyModal">
+						      	<td width="50%" class="date">
+							      	12-10-2018
+								</td>
+								<td width="50%"  class="symptom">
+							      	Fiebre
+								</td>
+						    </tr>
+						     <tr id="11" data-toggle="modal" data-target="#historyModal">
+						      	<td width="50%" class="date">
+							      	12-10-2018
+								</td>
+								<td width="50%" class="symptom">
+							      	Dolor de garganta 
+								</td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+				
+					<!-- Modal -->
+					<div class="modal fade" id="historyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				          <span aria-hidden="true"></span>
+				        </button>
+					  <div class="modal-dialog sm-modal" role="document">
+					    <div class="modal-content">
+					      <div class="modal-content d-flex">
+					      	<div class="col-12 padding-0 border-left">
+					    	
+						      	<div class="modal-body bordered-body">
+						      		
+					      			<div class=" patient-history">
+										
+							      		<div class="history-header">
+							      			<p class=" title-8 black-color">jorgelina benarancio</p>
+							      			<table class="w-100">
+								      			<tr>
+								      				<td class="patient-data w-50">DNI 33386332</td>
+								      				<td class="illness-data w-50">Motivo de la consulta: Dolor de garganta</td>
+								      			</tr>
+								      			<tr>
+								      				<td class="patient-data w-50">20/05/2019 <span>15:44</span></td>
+								      				<td class="illness-data w-50">Enfermedad: Dolor de garganta</td>
+								      			</tr>
+								      			<tr>
+								      				<td class="upper-data w-50">Atendió Dr Longo, Fernando</td>
+								      				<td class="illness-data w-50">Diagnótico: Angina</td>
+								      			</tr>
+								      			
+								      		</table>
+								      	</div>
+								      	<div class="top-line"></div>
+					
+								      		<p class=" title-8 black-color pb-2 pt-1">Conducta terapéutica</p>
+								      		<table class="w-100">
+								      			<tr>
+								      				<td class="tiny-text semilight-grey-color"> Indicaciones: </td>
+								      				<td class="tiny-text black-color"> Clínica médica </td>
+								      			</tr>
+								      			<tr>
+								      				<td class="tiny-text semilight-grey-color"> Signos de alerta: </td>
+								      				<td class="tiny-text black-color"> Fiebre mayor a 38º, decaimiento, sudoración, temblores. </td>
+								      			</tr>
+								      			<tr>
+								      				<td>
+														<table class="w-100">
+											      			<tr>
+											      				<td class="tiny-text black-color ckeck-icon p-2 ">No</td>
+											      				<td class="tiny-text black-color ckeck-icon p-2 ">Sin Urgencia</td>
+										      				</tr>
+											      		</table>
+								      				</td>
+								      				<td class="w-50">
+								      					<span class="tiny-text semilight-grey-color">Especialidad:</span>
+									      				<span class="tiny-text black-color">Clínica médica</span>
+									      			</td>
+								      			</tr>
+								      			
+								      		</table>
+
+								      		<div class="top-line"></div>
+								      		<p class=" title-8 black-color pb-2 pt-1">Estudios</p>
+								      		<table class="w-100">
+								      			<tr>
+								      				<td class="tiny-text semilight-grey-color w-50"> Laboratorio </td>
+								      				<td class="tiny-text semilight-grey-color w-50"> Otros</td>
+								      			</tr>
+								      			<tr class="studies">
+								      				<td class="upper-data w-50"> Sangre completo - Orina - Dhl - Sangre completo - Orina - Dhl</td>
+								      				<td class="upper-data w-50"> Electrocardiograma </td>
+								      			</tr>
+								      		</table>
+
+								      		<div class="top-line"></div>
+								      		<p class=" title-8 black-color pb-2 pt-1">Medicación</p>
+								      		<span class="tiny-text semilight-grey-color pb-2 pt-1">Bajo receta</span>
+								      		<table class="w-50">
+								      			<tr>
+								      				<td class="tiny-text black-color ckeck-icon p-2 ">No</td>
+								      				<td class="tiny-text black-color ckeck-icon p-2 ">Sin Urgencia</td>
+							      				</tr>
+								      		</table>
+								      		<table class="w-100">
+								      			<tr>
+								      				<td class="w-50"> 
+								      					<span class="tiny-text semilight-grey-color">Detalle de la prescripción: </span>
+								      					<span class="tiny-text black-color">Ibuprofeno</span>
+								      				</td>
+								      				<td class="w-50"> 
+								      					<span class="tiny-text semilight-grey-color"> Patologías crónicas: </span>
+								      					<span class="tiny-text black-color"> Ulcera </span>
+								      				</td>
+								      			</tr>
+								      			<tr >
+								      				<td class="w-50"> 
+								      					<span class="tiny-text semilight-grey-color">Alergias a medicamentos: </span>
+								      					<span class="tiny-text black-color">Penicilina</span>
+								      				</td>
+								      				<td class="w-50"> 
+								      					<span class="tiny-text semilight-grey-color"> Medicamentos crónicos: </span>
+								      					<span class="tiny-text black-color"> Bronax. Milimex </span>
+								      				</td>
+								      			</tr>
+								      		</table>
+								      		<div class="top-line"></div>
+								      		<p class=" title-8 black-color pb-2 pt-1">Notas privadas</p>
+								      		<p class="notes">Though it is the most prevalent of laser eye surgeries, LASIK has its share of complications. The post-operative complication rate is estimated from 3% to 6%. LASIK eye surgery involves cutting a flap of the corneal tissue with a hinge being left at one end of the flap. The flap is then folded back to reveal the stroma, the middle section of the cornea. After reshaping the corneal tissue with the aid of a high precision laser, typically the excimer laser, the flap is repositioned so as to remain in place by natural adhesion until it heals completely.
+
+											</p>
+										
+									</div>
+						      		
+				        		</div>
+				        	</div>
+					      	
+					      </div>
+					    </div>
+					  </div>
+					</div>
+					<!-- Modal -->
+				</form>
+			</section>
+		</div>
+
+		<!-- Loader -->
+		<div id="container-loader" class="d-none">
+		    <div class="aligner-items">
+				<svg class="lds-message" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><g transform="translate(25 50)"><circle cx="0" cy="0" r="8" fill="#d10018" transform="scale(0.209939 0.209939)"><animateTransform attributeName="transform" type="scale" begin="-0.3333333333333333s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform></circle></g><g transform="translate(50 50)"><circle cx="0" cy="0" r="8" fill="#7e7e7e" transform="scale(0.668805 0.668805)"><animateTransform attributeName="transform" type="scale" begin="-0.16666666666666666s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform></circle></g><g transform="translate(75 50)"><circle cx="0" cy="0" r="8" fill="#cccccc" transform="scale(0.993662 0.993662)"><animateTransform attributeName="transform" type="scale" begin="0s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform></circle></g>
+				</svg>
+			</div>
+		</div>
+		<!-- Loader -->
+		
+		<script src="js/vendor/jquery-3.3.1/jquery.min.js"></script>	
+		<script src="js/vendor/bootstrap-4.3.1/bootstrap.js"></script>
+		<script>
+			// Add an extra class to the modal backdrop to make it customizable
+
+			$('#historyModal').on('show.bs.modal', function (e) {
+			    setTimeout(function(){
+			        $('.modal-backdrop').addClass('hi');
+			       
+			    });
+			}); 
+
+			// Tabla modal lado izquierdo: Agrego una clase que pinta la fila seleccionada
+			$('.modal-striped-table tr').on('click', function (e) {
+				$('tr').removeClass('selected');
+			    $(this).addClass('selected');
+			}); 
+
+			
+		</script>
+
+	</body>	
+</html>

@@ -1,0 +1,239 @@
+/* -----------------------------------------------------------------------------*/
+/* This file contains all styles related to the button component.*/
+/* -----------------------------------------------------------------------------*/
+.btn{
+
+	display: inline-block;
+ 	font-family: $text-font-stack;
+  	text-transform: uppercase;
+  	text-align: center;
+  	vertical-align: middle;
+  	user-select: none;
+  	background-color: transparent;
+  	border: 1px solid transparent;
+  	text-decoration:none;
+  	@include btn-border-radius(50px);
+ 
+	
+	&:focus{
+		outline:none;
+	}
+	/*button sizes*/
+  	&.sm-btn{
+  		font-size: $sm-font-size-btn;
+  		padding: $sm-padding-btn;
+  		letter-spacing: $letter-spacing-one-half;
+  		@media (max-width: 767px){
+
+  			font-size: $md-font-size-btn;
+  		}
+  	}
+
+  	&.md-btn{
+  		font-size: $md-font-size-btn;
+  		padding: $md-padding-btn;
+  		letter-spacing: $letter-spacing-two;
+  	}
+	
+	/*margen standard para formulario*/
+	&.top-space-1{
+		margin-top: $space-top-btn-1;
+	}
+	&.top-space-2{
+		margin-top: $space-top-btn-3;
+	}
+
+	
+
+  	@media (min-width: 768px){
+  		margin:$margin-btn;
+  		font-size: $t10;
+  		font-weight: $normal-font-weight;
+  	}
+
+  	@media (max-width: 767px){
+  		margin:$margin-y2;
+  		font-size: $t13;
+  		font-weight: $medium-font-weight;
+  		letter-spacing: $letter-spacing-one-half;
+
+  		&.top-space-1{
+			margin-top: $space-top-btn-2;
+		}
+  	}
+}
+
+
+.btn.transparent{
+	font-weight: $light-font-weight;
+	color: $light-grey-color;
+
+	&.focus,
+	&:focus,
+	&:hover{
+
+		background: $brand-color;
+		color: $white-color;
+		@include transition(all,1s,ease-in-out);
+	}
+	
+}
+
+.btn.brand-color{
+	
+
+	font-weight: $normal-font-weight;
+	color: $light-grey-color;
+	background: $brand-color;
+	&.focus,
+	&:focus,
+	&:hover{
+		color: $white-color;
+		background: darken( $brand-color, 10% );
+		@include transition(all,0.5s,ease-in-out);
+	}
+}
+
+.btn.success{
+	@extend .btn.brand-color;
+	background: $btn-success-bg-color;
+
+	&.focus,&:focus,&:hover{
+		background: darken( $btn-success-bg-color, 10% );
+	
+	}
+}
+.btn.info{
+	@extend .btn.brand-color;
+	background: $btn-info-bg-color;
+
+	&.focus,&:focus,&:hover{
+		background: darken( $btn-info-bg-color, 10% );
+	
+	}
+}
+.btn.warning{
+	@extend .btn.brand-color;
+	background: $btn-warning-bg-color;
+
+	&.focus,&:focus,&:hover{
+		background: darken( $btn-warning-bg-color, 10% );
+	
+	}
+}
+
+
+
+
+.btn.grey-outline{
+	font-weight: $normal-font-weight;
+	border:1px solid $light-grey-color;
+	letter-spacing: $letter-spacing-half;
+	background: transparent;
+
+	&.focus,
+	&:focus,
+	&:hover{
+		
+		background: $brand-color;
+		color: $white-color;
+		@include transition(all,0.5s,ease-in-out);
+	}
+	@media (max-width: 767px){
+  		font-weight: $normal-font-weight;
+  	}
+
+}
+
+.btn.grey-outline-ToTransparent{
+	background: transparent;
+	font-weight: $light-font-weight;
+	color: $light-grey-color;
+	box-shadow: 0 0 0pt 1px $light-grey-color;
+	//@include prefix(box-shadow, 0 0 0pt 1px $light-grey-color, webkit ms);
+	@include transition(box-shadow,0.1s,ease-in-out);
+	text-decoration: none;
+	
+	&.focus,
+	&:focus,
+	&:hover{
+		box-shadow: 0 0 0 0 $light-grey-color;
+		
+	}
+}
+
+.btn.full-light-grey{
+	color:$grey-text-default-color;
+	background-color: $light-grey-color;
+	font-weight: $medium-font-weight;
+
+	&.focus,
+	&:focus,
+	&:hover{
+		color:$light-grey-color;
+		background-color: $brand-color;
+		@include transition(all,0.5s,ease-in-out);
+		
+	}
+}
+.btn.full-white{
+	color:$grey-text-default-color;
+	background-color: $white-color;
+	font-weight: $medium-font-weight;
+
+	&.focus,
+	&:focus,
+	&:hover{
+		color:$light-grey-color;
+		background-color: $brand-color;
+		@include transition(all,0.5s,ease-in-out);
+		
+	}
+}
+
+.btn.full-grey{
+	color:$white-color;
+	background-color: $semilight-grey-color;
+	font-weight: $medium-font-weight;
+
+	&.focus,
+	&:focus,
+	&:hover{
+		background-color: darken($semilight-grey-color, 10%);
+		@include transition(all,0.5s,ease-in-out);
+		
+	}
+}
+
+@media (max-width: 768px){
+	
+	.btn.sm-full-ac{
+		background-color: $brand-color;
+		border:1px solid $brand-color;
+	}
+	.btn.sm-transparent{
+		border:none;
+		background-color: transparent;
+	}
+	.btn.sm-full-grey{
+		color:$grey-text-default-color;
+		background-color: $light-grey-color;
+		font-weight: $medium-font-weight;
+	}
+}
+
+
+//login and register buttons color if scroll whithin the page 
+
+.navbar-scroll .btn, .btn.white-text{
+	color: $white-color;
+	&.focus,
+	&:focus,
+	&:hover{
+		border:1px solid $brand-color;
+		@include transition(all,0.5s,ease-in-out);
+		
+	}
+	
+}
+

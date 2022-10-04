@@ -1,0 +1,19 @@
+ .margintop100{
+  margin-top: 100px;
+}
+
+.modal-body{
+	background-color: lighten($light-grey-color, 3%);
+	padding: 1.5em 2em;
+	
+
+	.patient-history{
+		border:1px solid $semilight-grey-color;
+		padding: 1.5em;
+		background: $white-color;
+	}
+
+}
+	.modal-dialog{
+		margin: $modal-sm-margin;
+	}

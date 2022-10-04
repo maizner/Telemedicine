@@ -1,0 +1,113 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $grey-text-default-color;
+  font: normal 125% / 1.4 $text-font-stack;
+  font-weight: $normal-font-weight;
+  font-size:$base-font-size;
+}
+
+
+//Estilos grupales base del sitio
+//ver si es necesario pasar este estilo
+.title-1{
+	font-family: $text-font-stack;
+	//color:$grey-text-default-color;
+	font-weight: $light-font-weight;
+	font-size: $t50;
+}
+.title-2{
+	font-family: $text-font-stack;
+	// color:$grey-text-default-color;
+	font-weight: $normal-font-weight;
+	font-size: $t24;
+}
+.title-3{
+	font-family: $text-font-stack;
+	// color: $light-grey-color;
+	font-weight: $normal-font-weight;
+	font-size: $t19;
+	letter-spacing: $letter-spacing-two-half;
+	text-transform: uppercase;
+}
+.subtitle-3{
+	font-family: $text-font-stack;
+	// color: $light-grey-color;
+	
+	font-weight: $light-font-weight;
+	font-size: $t15;
+	letter-spacing: $letter-spacing-one;
+
+}
+.title-4{
+	font-family: $text-font-stack;
+	// color: $grey-text-default-color;
+	font-weight: $normal-font-weight;
+	font-size: $t27;
+	letter-spacing: $letter-spacing-half;
+	line-height: 2;
+	margin: $margin-0;
+}
+.subtitle-4{
+	font-family: $text-font-stack;
+	// color: $grey-text-default-color;
+	font-weight: $normal-font-weight;
+	font-size: $t16;
+}
+
+.title-5{
+	font-family: $text-font-stack;
+	// color: $light-grey-color;
+	font-weight: $normal-font-weight;
+	font-size: $t12;
+	letter-spacing: $letter-spacing-one-half;
+	line-height: 6;
+	margin: $margin-0;
+	text-transform: uppercase;
+}
+
+.title-6{
+	font-family: $text-font-stack;
+	// color: $light-grey-color;
+	font-weight: $normal-font-weight;
+	font-size: $t27;
+	letter-spacing: $letter-spacing-half;
+	margin: $margin-0;
+}
+
+//dentro de modales historial
+.title-7{
+	font-family: $text-font-stack;
+	// color: $light-grey-color;
+	font-weight: $medium-font-weight;
+	font-size: $t12;
+	margin: $margin-0;
+}
+
+//dentro de modales historial
+.title-8{
+	font-family: $text-font-stack;
+	// color: $light-grey-color;
+	font-weight: $bold-font-weight;
+	letter-spacing: $letter-spacing-half;
+	font-size: $t13;
+	margin: $margin-0;
+}
+
+
+.boilerplate-1{
+	font-family: $text-font-stack;
+	color: $semilight-grey-color;
+	font-weight: $normal-font-weight;
+	font-size: $t13;
+}
+
+
+.tiny-text{
+	font-family: $text-font-stack;
+	//color: $semilight-grey-color;
+	font-weight: $normal-font-weight;
+	letter-spacing: $letter-spacing-half;
+	font-size: $t13;
+}

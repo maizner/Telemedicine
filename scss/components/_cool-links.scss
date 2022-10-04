@@ -1,0 +1,51 @@
+/* -----------------------------------------------------------------------------*/
+/* cool links. effect*/
+/* -----------------------------------------------------------------------------*/
+
+.cool-link {
+
+	&.classic{
+		&::after{
+			content: '';
+		    display: block;
+		    width: 100%;
+		    background: transparent;
+		    padding-bottom:10px;
+		    border-bottom: 0px solid transparent;
+		   
+		}
+
+		&:hover, &.active{
+			
+			&::after{
+				border-bottom: 5px solid $brand-color;
+		    	@include transition(all,.2s,ease-in-out);
+	    	}
+		}
+
+		@include transition(all,.2s,ease-in-out);
+	}
+
+	&.snake{
+		&::after{
+			content: '';
+		    display: block;
+		    width: 0;
+		    background: transparent;
+		    padding-bottom:10px;
+		    border-bottom: 5px solid $brand-color;
+		   
+		}
+
+		&:hover, &.active{
+			
+			&::after{
+				width: 100%;
+		    	@include transition(all,.3s,ease-in-out);
+	    	}
+		}
+
+		@include transition(all,.3s,ease-in-out);
+	}
+
+}

@@ -1,0 +1,49 @@
+.form-button-group{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+	.btn-item{
+
+		height:                		24px;
+		text-transform:         	uppercase;
+		font-size:             		$button-group-font-size;
+		border:                		1px solid $button-group-bg-color;
+		padding-top:2px;
+		width: 50%;
+		text-align: center;
+		cursor:pointer;
+
+		input[type="radio"]{
+			display: none;
+			width: 100%;
+			height: 100%;
+		}
+
+		&.active{
+			display:                    block;
+			background-color:           $button-group-bg-color;
+			color:                      $button-group-color;
+			@include transition(all,.5s,ease-in-out);
+		}
+
+		&.cbu-radio{
+			border-top-left-radius:     $button-group-radius;
+			border-bottom-left-radius:  $button-group-radius;
+		}
+
+		&.alias-radio{
+			border-top-right-radius:    $button-group-radius;
+			border-bottom-right-radius: $button-group-radius;
+		}
+
+	}
+	
+	
+}
+
+
+
+
+
+

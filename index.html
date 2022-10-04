@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Bienvenido a Telemed!</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="shortcut icon" type="image/png" href="Img/favicon.ico"/>
+		<link rel="stylesheet" href="Css/Vendor/bootstrap-4.3.1/bootstrap.css">
+		<link rel="stylesheet" href="Css/Login.css">
+		
+	</head>
+	<body>
+		<style>
+			.hero-bg{
+				background:  url(img/bg-login.jpg);
+			}
+		</style>
+		
+
+		<div class="login">
+			<section class="md-hero-section position-relative d-flex flex-column">
+				<div class="mask hero-bg"></div>
+				<!-- Esta mascara solo mostrarla si el usuario carga una imagen, sino por defaul esta display none-->
+				<div class="mask ac-mask-left"><div class="mask overlay-mask"></div></div>
+				<!-- Esta mascara solo mostrarla si el usuario carga una imagen-->
+				<section class="navigation">
+					<header>
+						<nav class="navbar navbar-default md-nav navbar-expand-md " role="navigation">
+							<div class="half-brand-hero d-flex col-12 container">
+								<div class="d-flex flex-column col-5 branding-group ">
+									
+								   	<a class=" text-left" href="#">
+								    	<img src="img/logo-a.png" width="327" height="26" alt="">
+								  	</a>
+								  	<span class="t20 white-color lh27 text-left mt-3">Bienvenido al portal de atención a distancia</span>
+								  
+							  	</div>
+					
+							    <form class="login-btn-group ml-auto bg-image-form ">
+							    	<div  class="login-form">
+										<div class="form-group minimal">
+										    <label for="InputEmail">Email</label>
+										    <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="email@email.com.ar">
+										    
+									    </div>
+									    <div class="form-group minimal password position-relative">
+										    <label for="contrasena">Constraseña</label>
+										    <input type="password" class="form-control psw-input" id="contrasena" placeholder="+ 5 caracteres">
+										    <a class="forgot-psw down position-absolute " href="#">Olvidé contraseña</a>
+										    <div class="list-absolute-wrapper left">
+										    	<div class="triangle position-relative">
+											    	<p class="psw-valid-title">La contraseña debe contener </p>
+												    <ul class="list validation-list">
+												    	<li class="list-item true">
+												    		<span>Una letra</span>
+												    	</li>
+												    	<li class="list-item true">
+												    		<span>Un Número</span>
+												    	</li>
+												    	<li class="list-item false">
+												    		<span>Menos de 5 caracteres</span>
+												    	</li>
+												    	<li class="list-item false">
+												    		<span>Utilizar caracteres especiales</span>
+												    	</li>
+												    	<li class="list-item false">
+												    		<span>Otro item</span>
+												    	</li>
+												    	<li class="list-item false">
+												    		<span>Hasta 6 validaciones</span>
+												    	</li>
+												    </ul>
+
+											    </div>
+										    </div>
+									    </div>
+								      	<button class="btn sm-btn full-white d-block mt-5 mx-auto" type="submit">Iniciar sesión</button>
+							      	</div>
+							    </form>
+						    </div>
+						  
+						</nav>
+					</header>
+				</section>
+			</section>
+			<section class="container-large lg-padding-0 sm-padding-0">
+				<!--languages -->
+			    <ul id="langNav" class="sm-d-flex flex-row  navbar-nav mr-auto sm-w100">
+			    	<!--agregar scripts para active-->
+				    <li class="nav-item active">
+				        <a class="nav-link" href="#">Español</a>
+				    </li>
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">Portugues</a>
+				    </li>
+				    <li class="nav-item">
+				        <a class="nav-link" href="#">Inglés</a>
+				    </li>
+			      
+			    </ul>
+			</section>
+			<section class="container py-5">
+				<h1 class="title-4 lh17 mt-5">Somos un Proveedor de Servicios de Salud dedicados a proveer atención médica telefónica especializada las 24 horas de los 365 días del año.</h1>
+				<p class="subtitle-4 mt-3">Orientación médica en materia de salud e información especializada por profesionales.</p>
+
+				<!-- <table class="table table-striped mt-5 mb-5">
+				
+				  <tbody>
+				    <tr>
+				      	<td width="25%">
+					      	<label class="container-check success-color">Osde
+							  	<input type="checkbox" checked="checked">
+							  	<span class="checkmark"></span>
+							</label>
+						</td>
+						<td width="25%">
+					      	<label class="container-check success-color">Osde
+							  	<input type="checkbox" >
+							  	<span class="checkmark "></span>
+							</label>
+						</td>
+						<td width="25%">
+					      	<label class="container-check success-color">Omint
+							  	<input type="checkbox" >
+							  	<span class="checkmark"></span>
+							</label>
+						</td>
+						<td width="25%">
+					      	<label class="container-check success-color">OCemic plan de salud
+							  	<input type="checkbox" >
+							  	<span class="checkmark"></span>
+							</label>
+						</td>
+				    </tr>
+				    <tr>
+				      	<td width="25%">
+					      	<label class="container-check success-color">Osde
+							  	<input type="checkbox" >
+							  	<span class="checkmark"></span>
+							</label>
+						</td>
+						<td width="25%">
+					      	<label class="container-check success-color">Osde
+							  	<input type="checkbox" >
+							  	<span class="checkmark"></span>
+							</label>
+						</td>
+						<td width="25%">
+					      	<label class="container-check success-color">Omint
+							  	<input type="checkbox" >
+							  	<span class="checkmark"></span>
+							</label>
+						</td>
+						<td width="25%">
+					      	<label class="container-check success-color">OCemic plan de salud
+							  	<input type="checkbox" >
+							  	<span class="checkmark"></span>
+							</label>
+						</td>
+				    </tr>
+				    <tr>
+				      	<td width="25%">
+					      	<label class="container-check success-color">Osde
+							  	<input type="checkbox" >
+							  	<span class="checkmark"></span>
+							</label>
+						</td>
+						<td width="25%">
+					      	<label class="container-check success-color">Osde
+							  	<input type="checkbox" >
+							  	<span class="checkmark"></span>
+							</label>
+						</td>
+						<td width="25%">
+					      	<label class="container-check success-color">Omint
+							  	<input type="checkbox" >
+							  	<span class="checkmark"></span>
+							</label>
+						</td>
+						<td width="25%">
+					      	<label class="container-check success-color">OCemic plan de salud
+							  	<input type="checkbox" >
+							  	<span class="checkmark"></span>
+							</label>
+						</td>
+				    </tr>
+				  </tbody>
+				</table> -->
+			</section>
+		</div>
+
+		<!-- Loader -->
+		<div id="container-loader" class="d-none">
+		    <div class="aligner-items">
+				<svg class="lds-message" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><g transform="translate(25 50)"><circle cx="0" cy="0" r="8" fill="#d10018" transform="scale(0.209939 0.209939)"><animateTransform attributeName="transform" type="scale" begin="-0.3333333333333333s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform></circle></g><g transform="translate(50 50)"><circle cx="0" cy="0" r="8" fill="#7e7e7e" transform="scale(0.668805 0.668805)"><animateTransform attributeName="transform" type="scale" begin="-0.16666666666666666s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform></circle></g><g transform="translate(75 50)"><circle cx="0" cy="0" r="8" fill="#cccccc" transform="scale(0.993662 0.993662)"><animateTransform attributeName="transform" type="scale" begin="0s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform></circle></g>
+				</svg>
+			</div>
+		</div>
+		<!-- Loader -->
+		
+		<script src="Js/Vendor/jquery-3.3.1/jquery.min.js"></script>	
+		<script src="Js/Vendor/bootstrap-4.3.1/bootstrap.js"></script>
+		<script>
+			$('.psw-input').on('focus', function(){
+				$('.list-absolute-wrapper').fadeIn();
+			})
+			$('input').on('focusout', function(){
+				$('.list-absolute-wrapper').fadeOut();
+			});
+			
+			$('ul#langNav li.nav-item').on('click', function(){
+				$('li.nav-item').removeClass('active')
+				$(this).addClass('active');
+			});
+		</script>
+		
+	</body>	
+</html>

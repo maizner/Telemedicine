@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Bienvenido a My ASSIST CARD!</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="css/vendor/bootstrap-4.3.1/bootstrap.css">
+		<link rel="stylesheet" href="css/vendor/select2-4.0.7/core.css">
+		<link rel="stylesheet" href="css/vendor/bootstrap-tagsinput/bootstrap-tagsinput.css" >
+		<link rel="stylesheet" href="css/vendor/chardinjs/chardinjs.css">
+		<link rel="stylesheet" href="css/video-conference.css">
+	</head>
+	<body data-chardin-sequenced="true" data-chardin-auto="false" data-chardin-delay="800">
+		<!--Styles within the view to be manipulated by backend -->
+		<style>
+			.hero-bg{
+				background:  url(img/bg-video-conference.jpg);	
+			}
+			.video-box.pattern-bg{
+				background-image: url("img/pt-img.jpg"); /* The image used */
+				
+			}
+			.chat-box.pattern-bg{
+				background-image: url("img/chat-bg.jpg"); /* The image used */
+				background-repeat: repeat-y;
+			}
+			img.thumb {
+				width: 100%;
+				height: 100%;
+			}
+			.video-box .communication-container .connection .img-wrap {
+				border-radius: 10px;
+			}
+			.form-group.classic.rounded-form input, .form-group.classic.rounded-form .form-group.rounded-form.form-control input, .form-group.classic.rounded-form .form-control {
+				border: 1px solid #868686;
+			}
+		
+		</style>
+		<!--Welcome tour -->
+		<a class="margin-0" style="display: block; width:100%;" data-toggle="chardinjs-start" data-intro="Welcome to videoconference view. You can continue the tour by clicking on the screen or <button class='stop-tour btn sm-btn info d-block ml-auto mt-2 mb-2' data-toggle='chardinjs-stop'>Skip the tour</button>" data-position="bottom"></a>
+		<div class="video-conference">
+			<section class="hero-section position-relative d-flex flex-column">
+				<div class="mask hero-bg"></div>
+				<!-- Esta mascara solo mostrarla si el usuario carga una imagen, sino por defaul esta display none-->
+				<div class="mask ac-mask-left"><div class="mask overlay-mask"></div></div>
+				<!-- Esta mascara solo mostrarla si el usuario carga una imagen-->
+				<!--Nav-->
+				<section class="navigation">
+
+					<header>
+						<nav class="navbar navbar-default sm-nav navbar-expand-md " role="navigation">
+							<div class=" d-flex col-12 container-fluid margin-0 pt-1">
+								<div class="d-flex flex-column col-5 padding-0">
+								   	<a class="margin-0" href="#" >
+
+								    	<img src="img/logo-b.png" width="192" height="51" alt="Assist Card">
+								  	</a>
+							  	</div>
+					
+							    <form class="login-btn-group ml-auto bg-image-form ">
+							    	<div class="d-flex flex-row align-items-center">
+										
+										<button class="take-a-tour btn sm-btn brand-color d-block ml-auto" data-toggle="chardinjs-start" >
+								      		Take a tour
+								      	</button>
+										
+								      	<a href="#" class="logout" >
+								      		<span class="pr-2">
+								      			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21">
+												    <path fill="#FFF" fill-rule="evenodd" d="M2.285 10.875L4.59 13.16c.117.13.176.28.176.45 0 .169-.059.318-.176.449a.89.89 0 0 1-.215.127.605.605 0 0 1-.234.048.605.605 0 0 1-.235-.048.89.89 0 0 1-.215-.127L0 10.269 3.691 6.48a.617.617 0 0 1 .898 0 .596.596 0 0 1 .177.44.596.596 0 0 1-.176.44L2.324 9.624h10.781c.183 0 .332.059.45.176a.608.608 0 0 1 .175.449.617.617 0 0 1-.625.625H2.285zM18.75.25c.339 0 .632.12.879.361S20 1.148 20 1.5V19c0 .352-.124.648-.371.889-.247.24-.54.361-.879.361H8.125c-.352 0-.648-.12-.889-.361A1.208 1.208 0 0 1 6.875 19v-5.645h1.25v4.883c0 .209.075.388.225.537.15.15.328.225.537.225h9.101a.701.701 0 0 0 .528-.225.75.75 0 0 0 .214-.537l-.02-15.976a.75.75 0 0 0-.214-.537.701.701 0 0 0-.527-.225H8.887a.733.733 0 0 0-.537.225.733.733 0 0 0-.225.537v4.863h-1.25V1.5c0-.352.12-.648.361-.889.241-.24.537-.361.889-.361H18.75z"/>
+												</svg>
+								      		</span>
+								      		 Cerrar Sesión - Dra Cesarini
+								      	</a>
+										
+								      	<a href="medic-profile.html" class="user img-wrap rounded-circle bordered thumb" >
+								      		<div class="avatar avatar-small">NL</div>
+								      		<img src="img/thumb55x55.jpg" alt="Name Lastname"  width="55" class="thumb user-chatfile-img rounded-circle">
+								      	</a>
+								      	
+							      	</div>
+							    </form>
+						    </div>
+						  
+						</nav>
+					</header>
+					
+				</section>
+				<!--Nav-->
+			</section>
+			
+				
+			<section class="d-flex">
+				<div class="container-boxes d-flex padding-0 align-items-stretch">
+					<!--Video conference section-->
+					<div class="box-1 video-box position-relative overflow-hidden padding-0 user pattern-bg">
+						<!-- masrcara: Elemento se esconde en conexion exitosa y reaparece al cortarse-->
+						<div class="mask dark-mask-bottom" style="z-index:2"></div>
+
+						<div class="patient-extract" data-intro="Patient summary " data-position="bottom">
+							<!-- Elemento que aparece una vez se realiza la conexión con éxito -->
+							<div class="name">jorgelina benarancio</div>
+							<div class="pipe"></div>
+							<div class="age">33 años</div>
+							<div class="pipe"></div>
+							<div class="symthom">Síntoma: dolor de garganta y tos</div>
+							<!-- Elemento que aparece una vez se realiza la conexión con éxito -->
+						</div>
+						<div class="communication-container" bac>
+						
+							<div class="connection">
+								<!-- Elemento que aparece cuando esta initentando establecer conexion -->
+
+								<div class="ml-auto img-wrap dr-image" class="user img-wrap rounded-circle bordered thumb" style="background-image: url('img/thumb84x101.jpg');">
+									<div class="avatar avatar-large hidden ">Camera Off</div>
+								</div>
+								
+								<!-- Elemento que aparece cuando esta initentando establecer conexion -->
+								
+							</div>
+							<div class="keypad">
+								<div class="button-container d-flex w-100 justify-content-between align-items-end">
+									<div class="btn_video_group d-flex justify-content-around w-100 ">
+										<div class="text-center">
+											<button class="btn_video sm-btn-video btn-microphone on" data-intro="Mic ON/OFF " data-position="top"></button>
+											<p class="btn-text unclicked">Micrófono</p>
+										</div>
+										<div class="text-center">
+											<button class="btn_video sm-btn-video btn-camera on" data-intro="Camera ON/OFF " data-position="top"></button>
+											<p class="btn-text unclicked">Cámara</p>
+										</div>
+										<div class="text-center">
+											<button class="btn_video md-btn-video btn-call"  onclick="warningBlockMsj()" data-intro="Hang up the call when the meeting ends " data-position="top"></button>
+										</div>
+										<div class="text-center" >
+											<button class="btn_video sm-btn-video btn-chat off"  data-intro="Chat with your patient " data-position="top"></button>
+											<p class="btn-text unclicked">Chat</p>
+										</div>
+										<div class="text-center">
+											<button class="btn_video sm-btn-video btn-attach off" data-intro="Attach files " data-position="top"></button>
+											<p class="btn-text unclicked">Adjuntar</p>
+										</div>
+									</div>
+								</div>
+							</div>
+				      	</div>
+				      	<!-- Imagen a modo de ejemplo simula grabación: Acá va conexion de video  -->
+					</div>
+					<!--End Video conference section-->
+					<!--Form section-->
+					<div class="box-2 align-items-stretch d-flex medical-records light-grey-bg">
+						<form action="" >
+							<div class="w-100">
+								<!--COMIENZO DE BOTONES PRINCIPALES PILL -->
+								<ul class="nav nav-justified main-tab pills" id="MainPills" role="tablist" >
+									<!--BOTON REGISTRAR ATENCIÖN -->
+								  	<li class="nav-item">
+								    	<a class="nav-link active" id="registerAttentionTab" data-toggle="tab" href="#registerAttentionContent" role="tab" aria-controls="registerAttentionContent" aria-selected="true" data-intro="load the attention data here " data-position="bottom">
+								    		<p class="tab-title">Registrar Atención</p>
+								    		<p class="tab-subtitle">Completa la atención</p>
+								    	</a>	
+								  	</li>
+								  	<!--BOTON FICHA MEDICA -->
+								  	<li class="nav-item">
+								    	<a class="nav-link " id="medicalRecordTab" data-toggle="tab" href="#medicalRecordContent" role="tab" aria-controls="medicalRecordContent" aria-selected="false" data-intro="Personal data, reason for consultation and symptoms " data-position="bottom">
+								    		<p class="tab-title">Ficha Médica</p>
+								    		<p class="tab-subtitle">Incluye datos personales, síntomas y localización</p>
+								    	</a>
+								  	</li>
+								  	<!--BOTON HISTORIAL DE CONSULTAS -->
+								  	<li class="nav-item">
+								    	<a class="nav-link " id="medicalHistoryTab" data-toggle="tab" href="#medicalHistoryContent" role="tab" aria-controls="medicalHistoryContent" aria-selected="false" data-intro="History of past medical consultations " data-position="bottom">
+								    		<p class="tab-title">Historial de consultas</p>
+								    		<p class="tab-subtitle">Ingrese a cada caso para obtener detalles </p>
+								    	</a>
+								  	</li>
+								</ul>
+								<!--FIN DE BOTONES PRINCIPALES PILL -->
+
+								<!--COMIENZO DE SECCIÓN DE LOS 3 TABS PRINCIPALES Y SU CONTENIDO-->
+								<div class="tab-content superior-tab-content">
+									<!--COMIENZO DE TAB REGISTRAR ATENCION Y TODO SU CONTENIDO  -->
+									<div class="tab-pane active" id="registerAttentionContent" role="tabpanel" aria-labelledby="registerAttentionTab">
+										<!--Contenido del primer tab principal REGISTRAR ATENCIÓN-->
+
+								    		<ul class="nav nav-tabs nav-justified secondary-tabs" id="registrarInnerTab" role="tablist" >
+											  	<li class="nav-item ">
+											    	<a class="nav-link cool-link classic active" id="tab-a" data-toggle="tab" href="#tab-a-content" role="tab" aria-controls="tab-a-content" aria-selected="true" data-intro="Medical record, second medical opinion and details " data-position="bottom">
+											    		Conducta Terapeutica
+											    	</a>
+											  	</li>
+											  	<li class="nav-item">
+											    	<a class="nav-link cool-link classic" id="tab-b" data-toggle="tab" href="#tab-b-content" role="tab" aria-controls="tab-b-content" aria-selected="false" data-intro="Load Studies " data-position="bottom">
+											    		Estudios
+											    	</a>
+											  	</li>
+											  	<li class="nav-item">
+											    	<a class="nav-link cool-link classic" id="tab-c" data-toggle="tab" href="#tab-c-content" role="tab" aria-controls="tab-c-content" aria-selected="false" data-intro="Load medication " data-position="bottom">
+											    		Medicación
+											    	</a>
+											  	</li>
+											  	<li class="nav-item" data-toggle="chardinjs-note">
+											    	<a class="nav-link cool-link classic " id="tab-d" data-toggle="tab" href="#tab-d-content" role="tab" aria-controls="tab-d-content" aria-selected="false" data-intro="Create private notes " data-position="bottom">
+											    		Notas Privadas
+											    	</a>
+											  	</li>
+											</ul>
+
+											<div class="tab-content">
+												<!--TAB CONDUCTA TERAPEUTICA SOLAPA "1" -->
+												<div class="tab-pane grey-pane active" id="tab-a-content" role="tabpanel" aria-labelledby="tab-a">
+													<div class="container padding-0">
+														<div class="d-flex flex-row">
+														   <label class="container-check warning-color ml-auto m-1 mr-3">
+														   		Marcar como urgencia
+															  	<input type="checkbox" >
+															  	<span class="checkmark"></span>
+															</label>
+														</div>
+														<div class="d-flex">
+															<div class="col-6 padding-0">
+																<div class="form-group classic pr-1">
+																    <label for="motivo">Motivo Extendido de consulta:</label>
+																    <input type="text" class="form-control" id="motivo" placeholder="Ingrese" value="Dolor de garganta y tos">
+															    </div>
+															    <div class="form-group classic pr-1">
+																    <label for="motivo">Enfermedad actual:</label>
+																    <input type="text" class="form-control" id="motivo" placeholder="Ingrese" autocomplete="off">
+															    </div>
+															</div>
+															<div class="col-6 padding-0">
+														
+
+																<div class="form-group classic light-bordered pl-1">
+												      				<label for="dx">Diagnótico presuntivo: </label>
+																	<select id="dx" class="form-control autocomplete select2-single" tabindex="-1" aria-hidden="true" name="state" style="width:100%">
+																		<option value="0">Seleccione</option>
+																		<option value="6">Adenopatía</option>
+																		<option value="1">Mialgia epidémica </option>
+																		<option value="2">Dolor de mama </option>
+																		<option value="3">(F10-F19 con .180, .280, .980) Trastornos de ansiedad</option>
+																		<option value="4">Absceso</option>
+																		<option value="5">Absceso/ Flemón dental</option>
+																		
+																		<option value="6">Dolor de garganta y de tórax</option>
+																		
+																	</select>
+																</div>
+															    <div class="form-group classic pl-1">
+																    <label for="motivo">Indicaciones:</label>
+																    <input type="text" class="form-control" id="motivo" placeholder="Ingrese" autocomplete="off">
+															    </div>
+															</div>
+														</div>
+														
+													   
+													    <div class="form-group classic">
+														    <label for="motivo">Signos de alerta:</label>
+														    <input type="text" class="form-control" id="motivo" placeholder="Ingrese" autocomplete="off">
+													    </div>
+													  	<div class="form-group classic">
+														    <label >Requiere consulta presencial:</label>
+													    </div>
+													    <div class="d-flex mb-3 mt-3">
+											    			<!-- Rounded switch -->
+													      	<div id="visitRequired" class="switch-container visit mr-5">
+													      		<span class="switch-text disable active mr-4">No</span>
+																<label class="switch d-block margin-0">
+																  <input type="checkbox"  class="switch-checkbox">
+																  <span class="slider round"></span>
+																</label>
+																<span class="switch-text enable text-left ml-4">Si</span>
+															</div>
+															<!-- Rounded switch -->
+													      	<div id="urgency" class="switch-container">
+													      		<span class="switch-text disable active mr-4">Sin urgencia</span>
+																<label class="switch d-block margin-0">
+																  <input type="checkbox" class="switch-checkbox">
+																  <span class="slider round"></span>
+																</label>
+																<span class="switch-text enable text-left ml-4">Urgencia</span>
+															</div>
+															<!-- Rounded switch -->
+												    	</div>
+													     <div class="form-group classic specialist">
+														    <label for="motivo">Especialidad:</label>
+														    <input type="text" id="specialist" class="tagsinput form-control tagClass" value="" placeholder="Agregue especialista/s separado por coma" data-role="tagsinput" disabled=""/>
+
+
+													    </div>
+													   
+													    
+												    </div>
+												</div>
+												<!--FIN TAB CONDUCTA TERAPEUTICA SOLAPA "1" -->
+
+												<!-- TAB DE ESTUDIO SOLAPA "2" -->
+												<div class="tab-pane grey-pane" id="tab-b-content" role="tabpanel" aria-labelledby="tab-b">
+													
+													<div class="classic-label mt-4">
+														<label >Estudios:</label>
+													
+														<div class="tipo-de-estudio d-flex">
+														
+															<div class="estudio">
+																<label class="container-check success-color">Laboratorio
+																  	<input type="checkbox" >
+																  	<span class="checkmark"></span>
+																</label>
+															</div>
+															<div class="estudio">
+																<label class="container-check success-color">Imágenes
+																  	<input type="checkbox" >
+																  	<span class="checkmark"></span>
+																</label>
+															</div>
+															<div class="estudio">
+																<label class="container-check success-color">Otros
+																  	<input type="checkbox" >
+																  	<span class="checkmark"></span>
+																</label>
+															</div>
+														</div>
+													</div> 
+
+													<div class="form-group classic mt-4">
+													    <label for="studyType">Tipo de estudios:</label>
+													    
+													   <select  class=" form-control autocomplete" placeholder="Selecciona Estudio" id="studyType" class="select2" multiple="multiple" style="width:100%;">
+													   		<optgroup label="Laboratorio">
+															    <option value="AK" class="lab">LDL</option>
+															    <option value="HI" class="lab">DHL</option>
+															    <option value="HI" class="lab">Orina completo</option>
+															    <option value="HI" class="lab">Triglicéridos</option>
+															</optgroup>
+															<optgroup label="Imagenes">
+															    <option value="AK" class="img">RX DE TORAX</option>
+															    <option value="HI" class="img">RESONANCIA MAGNETICA</option>
+															</optgroup>
+															<optgroup label="Otros">
+															    <option value="AK" class="ot">ETC</option>
+															    <option value="HI" class="ot">ETC</option>
+															</optgroup>
+														   
+													   </select>
+													   
+													   <div class="pt-2">
+														   <textarea name="studies" id="studies" disabled="" style="">
+														   	
+														   </textarea>
+													   </div>
+													  
+												    </div> 
+												</div>
+												<!--FIN TAB DE ESTUDIO SOLAPA "2" -->
+
+												<!--TAB MEDICACIÓN SOLAPA "3"-->
+												<div class="tab-pane grey-pane" id="tab-c-content" role="tabpanel" aria-labelledby="tab-c">
+													<div>
+														<div class="d-flex flex-row">
+														   <label class="container-check success-color mb-3 mt-3">
+														   		Medicación venta bajo receta
+															  	<input type="checkbox" checked="">
+															  	<span class="checkmark"></span>
+															</label>
+														</div>
+														<div class="form-group classic">
+														    <label for="detaleofprescription">Detalle de la prescripción:</label>
+														    <input type="text" class="form-control" id="detaleofprescription" placeholder="Ingrese">
+													    </div>
+													    <div class="form-group classic">
+														    <label for="alergies">El paciente presenta alergia a algún medicamento:</label>
+														    <input type="text" class="form-control" id="alergies" placeholder="Ingrese">
+													    </div>
+													  
+													    <div class="form-group classic">
+														    <label for="cronicPatology">Patologías crónicas:</label>
+														    <input type="text" class="form-control" id="cronicPatology" placeholder="Ingrese">
+													    </div>
+													    <div class="form-group classic">
+														    <label for="specialMedication">Medicación asociada a dicha patología:</label>
+														     <input type="text" id="specialMedication" class="tagsinput form-control tagClass" value="" placeholder="Agregue medicación separada por comas" data-role="tagsinput"/>
+													    </div>
+												    </div>
+												</div>
+												<!--FIN TAB MEDICACIÓN SOLAPA "3" -->
+
+												<!--TAB NOTAS PRIVADAS SOLAPA "4" -->
+												<div class="tab-pane grey-pane padding-0" id="tab-d-content" role="tabpanel" aria-labelledby="tab-d">
+													<div class="container d-flex padding-0 align-items-stretch notes-container">
+														<div class="col-4 note-titles padding-0">
+															<button class="btn-new-note" type="button" data-intro="Click to start a new note " data-position="top">
+																<span class="edit-icon ">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="17" height="14" viewBox="0 0 17 14">
+																	    <path  fill-rule="nonzero" d="M8.424 10.66l1.1-1.1-1.441-1.442-1.1 1.1v.532h.91v.91h.531zm4.174-6.83c-.085-.085-.227-.076-.313.01l-3.32 3.32c-.086.086-.095.228-.01.313.086.086.228.076.313-.01l3.32-3.32c.086-.085.096-.227.01-.313zm.76 5.635v1.803A2.733 2.733 0 0 1 10.624 14H2.732A2.733 2.733 0 0 1 0 11.268V3.375A2.733 2.733 0 0 1 2.732.643h7.893c.38 0 .759.076 1.11.237a.31.31 0 0 1 .17.218c.02.105-.009.2-.085.275l-.465.465a.286.286 0 0 1-.303.076 1.65 1.65 0 0 0-.427-.057H2.732c-.835 0-1.518.683-1.518 1.518v7.893c0 .835.683 1.518 1.518 1.518h7.893c.835 0 1.518-.683 1.518-1.518v-1.195c0-.076.028-.152.085-.21l.607-.606a.294.294 0 0 1 .332-.067c.114.048.19.152.19.275zm-.912-7l2.733 2.731-6.375 6.375H6.07V8.84l6.375-6.375zm4.213 1.252l-.873.872-2.732-2.732.872-.873a.922.922 0 0 1 1.29 0l1.443 1.442a.922.922 0 0 1 0 1.29z"/>
+																	</svg>
+																
+																</span>
+																New Note
+															</button>
+															<div class="position-relative title-wrapper" style="display:none;">
+																<div class='note-title' >New Note </div>
+																<span class="icon-remove" style="display:none;"></span>
+															</div>
+															
+														</div>
+														<div class="col-8 white-bg note-content">
+															
+															<textarea id='note' class='notes' disabled="" name='note' placeholder=""></textarea>
+															
+														</div>
+														
+													</div>
+												</div>
+												<!--FIN TAB NOTAS PRIVADAS SOLAPA "4" -->
+												
+											</div>
+										<!--Fin Contenido del primer tab principal REGISTRAR ATENCIÓN-->
+									</div>
+									<!--FIN DE TAB REGISTRAR ATENCION Y TODO SU CONTENIDO (TAB) -->
+
+									<!--COMIENZO TAB FICHA MEDICA Y TODO SU CONTENIDO (TAB) -->
+									<div class="tab-pane medicalRecord-pane" id="medicalRecordContent" role="tabpanel" aria-labelledby="medicalRecordTab">
+
+										<div class=" patient-history">
+											<div class="phist-padding">
+									      		<div class="history-header">
+									      			
+									      			<div class="d-flex">
+										      			<table class="col-6">
+										      				<tr>
+											      				<td class=" title-8 black-color">jorgelina benarancio</td>
+											      			</tr>
+											      			<tr>
+											      				<td class="patient-data w-100 pb-3">DNI 33386332</td>
+											      			</tr>
+											      			<tr>
+											      				<td class="upper-data w-100 lh18">Domicilio:</td>
+											      			</tr>
+											      			<tr>
+											      				<td class="upper-data w-100 ">av melian 234 3C </td>
+											      			</tr>
+											      			
+											      		</table>
+											      		<div class="col-6 d-flex">
+											      			<span class="user img-wrap rounded-circle bordered thumb d-flex ml-auto align-self-center" style="width:100px;height:100px;overflow:hidden; background-image: url('img/thumb84x102.jpg')">
+													      	</span>
+											      		</div>
+										      		</div>
+										      	</div>
+										      	<div class="top-line symthom"></div>
+										      	<div class="symthom">
+										      		<p class=" title-8 black-color pb-2 pt-1">Síntoma/ Localización</p>
+										      		<table class="w-100">
+										      			<tr>
+										      				<td class="tiny-text semilight-grey-color"> 
+										      					Síntoma: 
+										      					<span class=" black-color"> Dolor de garganta</span>
+										      				</td>
+										      			</tr>
+										      			<tr>
+										      				<!-- <td class="tiny-text semilight-grey-color"> 
+										      					Ubicación: 
+										      					<span class=" black-color"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi a, aut ullam. </span>
+										      				</td> -->
+										      			</tr>
+										      			<tr>
+										      				<td class="tiny-text semilight-grey-color"> 
+										      					Teléfono:
+										      					<span class="black-color"> +55 117 38473974</span>
+										      				</td>
+										      			</tr>
+										      		</table>
+									      		</div>
+									      		<div class="top-line"></div>
+									      		<p class="title-8 black-color pb-2 pt-1">Archivos adjuntos</p>
+
+									      		<div class="d-flex files">
+									      			<div class="file image-type">
+									      				<span class="icon"></span>
+									      				<a href="#openFile" id="IC" class="file-text" data-toggle="modal" data-target="#openFile">
+										      				Análisis sangre.jpg	
+										      				<span class="size">1 MB</span>
+									      				</a>
+									      			</div>
+									      			
+									      			<div class="file image-type">
+									      				<span class="icon"></span>
+									      				<a href="#openFile" data-toggle="modal" data-target="#openFile" class="file-text">
+										      				Análisis sangre.jpg	
+										      				<span class="size">1 MB</span>
+									      				</a>
+									      			</div>
+								      			</div>
+
+								      			
+								      		</div>
+							      		</div>
+									</div>
+									<!--FIN TAB FICHA MEDICA Y TODO SU CONTENIDO (TAB) -->
+
+									<!--COMIENZO TAB HISTORIAL DE CONSULTAS Y TODO SU CONTENIDO (TAB) -->
+									<div class="tab-pane " id="medicalHistoryContent" role="tabpanel" aria-labelledby="medicalHistoryTab">
+										<div class="histories-container">
+											<p class="grey-color t16">Ingrese a cada caso para obtener detalles</p>
+											<!--Tabla de pacientes  -->
+											<div class="table-container scroll-pane">
+												<div class="scroll-tab">
+													<table id="history" class="table table-striped history-striped-table table-borderless">
+													    <tr id="0"  >
+													      	<td class="date ">
+														      	12-10-2020
+															</td>
+															<td  class="symptom ">
+														      	Fiebre
+															</td>
+													    </tr>
+													    <tr id="1"  >
+													      	<td class="date  ">
+														      	22-09-2016
+															</td>
+															<td class="symptom  ">
+														      	Gastritis
+															</td>
+													    </tr>
+													
+													  </tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<!--Tabla de pacientes  -->
+										<!--Historial del pacientes se visualiza cuando se hace click sobre un paciente -->
+										<div class="patient-history-container" style="display:none;">
+											<div class="d-flex p-2 back-container">
+									      		<button type="button" class="btn back ml-auto">Volver</button>
+									      	</div>
+									      
+											<div class="patient-history ">
+												<div class="scroll-pane">
+													<div class="scoll-tab">
+											      		<div class="history-header">
+											      			<p class=" title-8 black-color">jorgelina benarancio</p>
+											      			<table class="w-100">
+												      			<tr>
+												      				<td class="patient-data w-50">DNI 33386332</td>
+												      				<td class="illness-data w-50">Motivo de la consulta: Dolor de garganta</td>
+												      			</tr>
+												      			<tr>
+												      				<td class="patient-data w-50">20/05/2019 <span>15:44</span></td>
+												      				<td class="illness-data w-50">Enfermedad: Dolor de garganta</td>
+												      			</tr>
+												      			<tr>
+												      				<td class="upper-data w-50">Atendió Dr Longo, Fernando</td>
+												      				<td class="illness-data w-50">Diagnótico: Angina</td>
+												      			</tr>
+												      			
+												      		</table>
+												      	</div>
+												      	<div class="top-line"></div>
+									
+												      		<p class=" title-8 black-color pb-2 pt-1">Conducta terapéutica</p>
+												      		<table class="w-100">
+												      			<tr>
+												      				<td class="tiny-text semilight-grey-color"> Indicaciones: </td>
+												      				<td class="tiny-text black-color"> Clínica médica </td>
+												      			</tr>
+												      			<tr>
+												      				<td class="tiny-text semilight-grey-color"> Signos de alerta: </td>
+												      				<td class="tiny-text black-color"> Fiebre mayor a 38º, decaimiento, sudoración, temblores. </td>
+												      			</tr>
+												      			<tr>
+												      				<td>
+																		<div class="d-flex w-100">
+													      					<span class="tiny-text black-color ckeck-icon p-2">No</span>
+													      					<span class="tiny-text black-color ckeck-icon p-2">Sin Urgencia</span>
+												      					</div>
+												      				</td>
+												      				<td class="w-50">
+												      					<span class="tiny-text semilight-grey-color">Especialidad:</span>
+													      				<span class="tiny-text black-color">Clínica médica</span>
+													      			</td>
+												      			</tr>
+												      			
+												      		</table>
+
+												      		<div class="top-line"></div>
+												      		<p class=" title-8 black-color pb-2 pt-1">Estudios</p>
+												      		<table class="w-100">
+												      			<tr>
+												      				<td class="tiny-text semilight-grey-color w-50"> Laboratorio </td>
+												      				<td class="tiny-text semilight-grey-color w-50"> Otros</td>
+												      			</tr>
+												      			<tr class="studies">
+												      				<td class="upper-data w-50"> Sangre completo - Orina - Dhl - Sangre completo - Orina - Dhl</td>
+												      				<td class="upper-data w-50"> Electrocardiograma </td>
+												      			</tr>
+												      		</table>
+
+												      		<div class="top-line"></div>
+												      		<p class=" title-8 black-color pb-2 pt-1">Medicación</p>
+												      		<span class="tiny-text semilight-grey-color pb-2 pt-1">Bajo receta</span>
+												      		<table class="w-50">
+												      			<tr>
+												      				<td class="tiny-text black-color ckeck-icon p-2 ">No</td>
+												      				<td class="tiny-text black-color ckeck-icon p-2 ">Sin Urgencia</td>
+											      				</tr>
+												      		</table>
+												      		<table class="w-100">
+												      			<tr>
+												      				<td class="w-50"> 
+												      					<span class="tiny-text semilight-grey-color">Detalle de la prescripción: </span>
+												      					<span class="tiny-text black-color">Ibuprofeno</span>
+												      				</td>
+												      				<td class="w-50"> 
+												      					<span class="tiny-text semilight-grey-color"> Patologías crónicas: </span>
+												      					<span class="tiny-text black-color"> Ulcera </span>
+												      				</td>
+												      			</tr>
+												      			<tr >
+												      				<td class="w-50"> 
+												      					<span class="tiny-text semilight-grey-color">Alergias a medicamentos: </span>
+												      					<span class="tiny-text black-color">Penicilina</span>
+												      				</td>
+												      				<td class="w-50"> 
+												      					<span class="tiny-text semilight-grey-color"> Medicamentos crónicos: </span>
+												      					<span class="tiny-text black-color"> Bronax. Milimex </span>
+												      				</td>
+												      			</tr>
+												      		</table>
+												      		<div class="top-line"></div>
+												      		<p class=" title-8 black-color pb-2 pt-1">Notas privadas</p>
+												      		<p class="notes">
+																Persistencia de los síntomas y signos de dificultad respiratoria
+																moderada/grave y/o necesidad de oxigenoterapia, tras el tratamiento de rescate
+																inicial, 3 dosis de salbutamol + ipratropio y corticoides sistémicos.
+															</p>
+											      		</div>
+										      	</div>
+								      		</div>
+									      		
+										</div>
+										<!--FIN Historial del pacientes -->
+									</div>
+									<!--COMIENZO TAB HISTORIAL DE CONSULTAS Y TODO SU CONTENIDO (TAB) -->
+								</div>
+								<!--FIN DE SECCIÓN DE LOS 3 TABS PRINCIPALES Y SU CONTENIDO-->
+								
+								<!--BOTON DE FORMULARIO-->
+								<div class="d-flex flex-row pt-3 pb-5">
+								
+									<a class="btn sm-btn brand-color d-block ml-auto" type="submit" data-intro="End the attention when EHR is complete " data-position="top"  style="color:white">Finalizar la atención</a>
+								</div>
+								<!--FIN BOTON DE FORMULARIO-->
+							</div>
+						</form>
+						
+					</div>
+					<!--End Form section-->
+
+					<!--Chat section-->
+					<div class="box-3 chat-box position-relative overflow-hidden padding-0 pattern-bg" >
+						
+						<div class="communication-container">
+							<ul class="nav nav-tabs" id="myChat" role="tablist">
+							  	<li class="nav-item">
+							    	<a class="nav-link active" id="chat-tab" data-toggle="tab" href="#chat" role="tab" aria-controls="chat" aria-selected="true">Chat</a>
+							  	</li>
+							  	<li class="nav-item">
+							    	<a class="nav-link" id="chatfile-tab" data-toggle="tab" href="#chatfile" role="tab" aria-controls="chatfile" aria-selected="false">Archivos <span class="ml-auto close-tab" ></span> </a>
+
+							  	</li>
+							
+							</ul>
+							<div class="chat-cont">
+								<div class="tab-content" id="myChatContent">
+								  <div class="tab-pane fade show active" id="chat" role="tabpanel" aria-labelledby="chat-tab">
+								  	<!--Ejemplo de globo de chat:Se utilizan las dos clases el tipo de baloon-1 es blanco-->
+								  	<div class="chat-balloon balloon-1">Buenas tardes Dra</div>
+								  	<!--Ejemplo de globo de chat : Se utilizan las dos clases el tipo de baloon-2 es celeste-->
+								  	<div class="chat-balloon balloon-2">Hola jorgelina, ¿Cómo te sentís?</div>
+								  	<div class="chat-balloon balloon-1">No tan bien a decir verdad. Tengo mucho dolor de garganta </div>
+									  <div class="chat-balloon balloon-2">Podes pasarme el estudio de laboratorio que hiciste?</div>
+									  <div class="chat-balloon balloon-1">ahí va </div>
+
+								  	<div class="chat-balloon file image-type">
+								  		<a href="#openFile" class="file-link" data-toggle="modal" data-target="#openFile">
+									  		<div class="thumb-balloon-wrapper">
+						      					<img src="img/image-file-thumb.jpg" alt="file-name" >
+						      				</div>
+											<div class="file-text">
+						      				Análisis sangre.jpg	
+						      				<span class="size">1 MB</span>
+						      				</div>
+					      				</a>
+					      			</div>
+									  <div class="chat-balloon balloon-1">Llegó?</div>
+									  
+
+									
+
+					      		
+								  	
+								  </div>
+								  <div class="tab-pane fade" id="chatfile" role="tabpanel" aria-labelledby="chatfile-tab">
+
+								  	 <!-- Esta solapa contendrá el filtro de todos los archivos recibidos dentro del chat.  -->
+								  		<div class="chat-balloon file image-type">
+								  		<a href="#openFile" class="file-link" data-toggle="modal" data-target="#openFile">
+									  		<div class="thumb-balloon-wrapper">
+						      					<img src="img/image-file-thumb.jpg" alt="file-name" >
+						      				</div>
+											<div class="file-text">
+						      				Análisis sangre.jpg	
+						      				<span class="size">1 MB</span>
+						      				</div>
+					      				</a>
+					      			</div>
+									
+
+					      			
+								  	
+								  </div>
+								  
+								</div>
+								
+								<div class="form-group d-flex sender classic rounded-form ">
+								    <input type="text" class ="form-control chat-input" autocomplete="off" id="chatInput" placeholder="...">
+								    <input type="button" class="btn chat-btn"  onclick="agregarGlobo()" >
+							    </div>
+							</div>
+							
+						</div>
+						
+					</div> 
+					<!--End Chat section-->
+
+					
+				</div>
+
+			</section>
+			<!-- Modal -->
+			<div class="modal fade" id="openFile" tabindex="-1" role="dialog"  aria-hidden="true">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          	<span aria-hidden="true"></span>
+		        </button>
+				<div class="modal-dialog md-modal" role="document">
+				    <div class="modal-content">
+				      	<div class="modal-content d-flex">
+				      		<img src="img/imagefile.png" alt="">
+				      	</div>
+				    </div>
+				</div>
+			</div>
+			<!-- Modal -->
+		</div>
+		
+
+		<!-- Loader -->
+		<div id="container-loader" class="d-none">
+		    <div class="aligner-items">
+				<svg class="lds-message" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><g transform="translate(25 50)"><circle cx="0" cy="0" r="8" fill="#d10018" transform="scale(0.209939 0.209939)"><animateTransform attributeName="transform" type="scale" begin="-0.3333333333333333s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform></circle></g><g transform="translate(50 50)"><circle cx="0" cy="0" r="8" fill="#7e7e7e" transform="scale(0.668805 0.668805)"><animateTransform attributeName="transform" type="scale" begin="-0.16666666666666666s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform></circle></g><g transform="translate(75 50)"><circle cx="0" cy="0" r="8" fill="#cccccc" transform="scale(0.993662 0.993662)"><animateTransform attributeName="transform" type="scale" begin="0s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform></circle></g>
+				</svg>
+			</div>
+		</div>
+		<!-- Loader -->
+		
+		<script src="js/vendor/jquery-3.3.1/jquery.min.js"></script>	
+		<script src="js/vendor/bootstrap-4.3.1/bootstrap.js"></script>
+		<script src="js/vendor/select2-4.0.7/select2.js"></script>
+   	 	<script src="js/vendor/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+   	 	<script src="js/vendor/scrollbar/nanoScroller.js"></script>
+   	 	<script src="js/switchToggleColor/switchToggleColor.js"></script>
+   	 	<script src="js/formLabel/focusInOut.js"></script>
+   	 	<script src="js/vendor/toastr/toastr.min.js"></script>
+		<script src="js/vendor/chardinjs/chardinjs.min.js"></script>
+   	 	<!-- Funciones de form Notas Privadas  -->
+   	 	<script src="js/videoConference/form/privateNotes.js"></script>
+   	 	<!-- Funciones de form: tabla historial de consultas -->
+   	 	<script src="js/videoConference/form/patientsHistoryTable.js"></script>
+   	 	<!-- Scripts del chat -->
+   	 	<script src="js/videoConference/chat/chat.js"></script>
+   	 	<!-- Scripts de botones de video conferencia -->
+   	 	<script src="js/videoConference/video/video.js"></script>
+	   	<script>
+			$(document).ready(function() {
+	        	//Inicializo plugin select2 para los dropdown y el plugin para el scroll cross browser dentro 	
+	    		$("#studyType").select2();
+	    		$("#dx").select2();
+	    		
+		 		//Inicializo nano scroller plugin ( barra de scroll cross browser ) al abrir un select
+			    $('.select2').on('click', function(){
+					$(".nano").nanoScroller();
+			 	});	
+
+				//Tour
+				$('body').chardinJs({'attribute': 'data-intro'});
+				$('body').chardinJs('start');
+				$('button[data-toggle="chardinjs-start"]').on('click', function(){
+					$('body').chardinJs('start')
+				});
+				$('button[data-toggle="chardinjs-stop"]').on('click', function(){
+					$('body').chardinJs('stop')
+				});
+				$('li[data-toggle="chardinjs-note"]').on('click', function(){
+					$('#tab-d-content').chardinJs('start')
+				});
+			
+	        });
+			/*-----------------FORMULARIOS CON LABEL EN GENERAL--------------*/
+			//Togleo de clase para label de formularios js/formLabel/focusInOut.js
+			focusInOutLabelForm()
+
+			// Agrego una clase al modal background para hacerla customizable ( mas oscuro)
+			$('#openFile').on('show.bs.modal', function (e) {
+			    setTimeout(function(){
+			        $('.modal-backdrop').addClass('hi');
+			    });
+			}); 
+			/*-----------------VIDEO LLAMADA BOTONES--------------*/
+			// BTN video llamada: Estilos para estados on/off clicked/unclicked
+			buttonVideoBehavior()
+
+			function warningBlockMsj(){
+
+				toastr.options = {
+
+				  "showDuration": "300",
+				  "hideDuration": "1000",
+				  "allowHtml": true,
+				  "timeOut": 0,
+				  "extendedTimeOut": 0,
+				  "showEasing": "swing",
+				  "hideEasing": "linear",
+				  "showMethod": "fadeIn",
+				  "hideMethod": "fadeOut",
+				  "tapToDismiss": false
+				};
+				var buttonSection= "<div id='btn-box'><button type='button' class='btn clear sm-btn ml-auto btn-outline'>Cancelar</button><button type='button' class='btn accept sm-btn btn-full'>Aceptar</button></div>"
+
+				toastr.warning("Esta a punto de abandonar la conexión. ¿Esta seguro?" +  buttonSection);
+
+				//habilito btn cancel 
+				$('body').on('click', '#btn-box .clear', function () {
+		    		$(this).closest('.toast').remove();
+				});
+			};
+			/*----------------- REGISTRAR ATENCION / CONDUCTA TERAPEUTICA/ SWITCH--------------*/
+			//Agrego clase css al texto que refiere el estado checked en el switch. La funcion estará en switchToggleColor/switchToggleColor.js	
+			switchToggleColor("#visitRequired, #urgency")
+			/*----------------- REGISTRAR ATENCION / CONDUCTA TERAPEUTICA/ INPUT ESPECIALIDAD--------------*/
+			//Agrego clase css al plugin para personalizar.	
+			$('#specialist').tagsinput({
+				tagClass: 'tag-specialists'
+			});
+			/*----------------- NOTAS PRIVADAS--------------*/
+			/*Momentaneamente será una sola nota ya que no se reabre el caso y por llamado será un nuevo caso
+			 Para la demo no borro ni agrego, solamente muestro o vacio y escondo */
+			privateNotes() 
+			/*-----------------FICHA MEDICA--------------*/	
+			PatientHistoryTable()
+			/*-----------------VENTANA DE CHAT--------------*/	
+			toggleChat()
+			function agregarGlobo() {
+				$("#myChatContent #chat").append("<div class='chat-balloon balloon-2'>si, perfecto</div>")
+				$("#chatInput").val("")
+			}
+
+			
+			  
+		</script>
+		
+		
+	</body>	
+</html>

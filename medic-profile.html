@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Bienvenido a My ASSIST CARD!</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="css/vendor/bootstrap-4.3.1/bootstrap.css">
+		<link rel="stylesheet" href="css/vendor/bootstrap-tagsinput/bootstrap-tagsinput.css" >
+		<link rel="stylesheet" href="css/vendor/select2-4.0.7/core.css">
+		<link rel="stylesheet" href="css/MedicProfile.css">
+
+	
+		
+	</head>
+	<body >
+		<style>
+			.hero-bg{
+				background: url(img/bg-login.jpg);
+			}
+		</style>
+		
+
+		<div class="doctor-profile">
+			<section class="hero-section position-relative d-flex flex-column">
+				<div class="mask hero-bg"></div>
+				<!-- Esta mascara solo mostrarla si el usuario carga una imagen, sino por defaul esta display none-->
+				<div class="mask ac-mask-left"><div class="mask overlay-mask"></div></div>
+				<!-- Esta mascara solo mostrarla si el usuario carga una imagen-->
+				<section class="navigation">
+					<header>
+						<nav class="navbar navbar-default sm-nav navbar-expand-md " role="navigation">
+							<div class="d-flex col-12 container-fluid margin-0 pt-1">
+								<div class="d-flex flex-column col-5 padding-0">
+								   	<a class="margin-0" href="#">
+								    	<img src="img/logo-b.png" width="192" height="51" alt="Assist Card">
+								  	</a>
+							  	</div>
+					
+							    <form class="login-btn-group ml-auto bg-image-form ">
+							    	<div >
+								      	<a href="#" class="logout">
+								      		<span class="pr-2">
+								      			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21">
+												    <path fill="#FFF" fill-rule="evenodd" d="M2.285 10.875L4.59 13.16c.117.13.176.28.176.45 0 .169-.059.318-.176.449a.89.89 0 0 1-.215.127.605.605 0 0 1-.234.048.605.605 0 0 1-.235-.048.89.89 0 0 1-.215-.127L0 10.269 3.691 6.48a.617.617 0 0 1 .898 0 .596.596 0 0 1 .177.44.596.596 0 0 1-.176.44L2.324 9.624h10.781c.183 0 .332.059.45.176a.608.608 0 0 1 .175.449.617.617 0 0 1-.625.625H2.285zM18.75.25c.339 0 .632.12.879.361S20 1.148 20 1.5V19c0 .352-.124.648-.371.889-.247.24-.54.361-.879.361H8.125c-.352 0-.648-.12-.889-.361A1.208 1.208 0 0 1 6.875 19v-5.645h1.25v4.883c0 .209.075.388.225.537.15.15.328.225.537.225h9.101a.701.701 0 0 0 .528-.225.75.75 0 0 0 .214-.537l-.02-15.976a.75.75 0 0 0-.214-.537.701.701 0 0 0-.527-.225H8.887a.733.733 0 0 0-.537.225.733.733 0 0 0-.225.537v4.863h-1.25V1.5c0-.352.12-.648.361-.889.241-.24.537-.361.889-.361H18.75z"/>
+												</svg>
+
+								      		</span>
+								      		Cerrar Sesión
+								      	</a>
+								      	<a href="#" class="user">
+								      		<img src="img/thumb55x55.jpg" alt=""  width="55" class="rounded-circle bordered thumb">
+								      	</a>
+								      	
+							      	</div>
+							    </form>
+						    </div>
+						  
+						</nav>
+					</header>
+				</section>
+			</section>
+			
+			<section class="pickanimage light-grey-bg container-fluid d-flex">
+				<div class="col-3 d-flex">
+		      		<img src="img/thumb100x100.jpg" alt="lastname"  width="100" class="rounded-circle bordered thumb m-3 mt-4">
+		      		<div class="d-flex flex-column justify-content-center mt-4">
+			      		<div class="mb-2 profile-text">Imagen de perfil</div>
+
+			      		<div class="input-file-btn bordered">
+							<input type="file" name="input-file-photo[]" id="input-file-photo" class="inputfile d-none" data-multiple-caption="{count} files selected" multiple />
+							<label class="file-btn" for="input-file-photo">
+								<!-- reflejar cambio visual al cambio de imagen-->
+								<span class="file-uploaded d-none"></span> 
+								<div class="file-input-title btn sm-btn d-block w-100 white-bg">Cambiar</div>
+							</label>
+						</div>
+		      		</div>
+		      	</div>
+		      	<div class="col-2 ml-auto text-right">
+		      		<a href="video-conference.html" class="btn back ml-auto t12 mt-4">Volver</a>
+		      	</div>
+			</section>
+			
+			<section class="profile-form light-grey-bg">
+				<form action="" class="form">
+					
+					<div class=" pt-3" > 
+						<div class="container-large d-flex flex-wrap">
+							<div class="col-4">
+								<h2 class="title-6" >Datos Personales</h2>
+							</div>
+							<div class="col-4">
+								<h2 class="title-6" >Formación Académica</h2>
+							</div>
+							<div class="col-4">
+								<h2 class="title-6" >Datos Bancarios</h2>
+							</div>
+						</div>
+						<div class="container-large d-flex align-items-strech">
+							<div class="col-4 blockx3 " >
+								
+								<div class="form-grey-column" >
+									<div class="form-group minimal error">
+									    <label for="name">Nombre</label>
+									    <input type="text" class="form-control" id="name" placeholder="Tu nombre">
+									    <span class="message">Completar</span>
+								    </div>
+									<div class="form-group minimal success">
+									    <label for="lastname">Apellido</label>
+									    <input type="text" class="form-control" id="lastname" placeholder="lastname">
+									   
+								    </div>
+									<div class="form-group minimal autocomplete small-uppercase">
+										<label for="doc-type">Tipo de documento</label>
+										<select id="doc-type" class="form-control select2-single" tabindex="-1" aria-hidden="true" name="state">
+											<option value="0">DNI</option>
+											<option value="1">Cédula</option>
+											<option value="2">Libreta</option>
+										</select>
+									</div>
+									<div class="form-group minimal ">
+									    <label for="doc">Numero de documento</label>
+									    <input type="text" class="form-control" id="doc" placeholder="32165432">
+									    <span class="message"></span>
+								    </div>
+								    <div class="form-group minimal ">
+									    <label for="doc">Domicilio</label>
+									    <input type="text" class="form-control" id="doc" placeholder="Calle, número y piso">
+									    <span class="message"></span>
+								    </div>
+									<div class="form-group minimal autocomplete">
+										<label for="gender">Genero</label>
+										<select id="gender" class="form-control select2-single" tabindex="-1" aria-hidden="true" name="state">
+											<option value="0">Femenino</option>
+											<option value="1">Masculino</option>
+										</select>
+									</div>
+									<div class="form-group minimal">
+									    <label for="nac">Nacionalidad</label>
+									      <select class="js-example-placeholder-multiple js-states form-control" id="nac" >
+										   	<option value="0">Argelia</option>
+										   	<option value="1">Argentina</option>
+										   	<option value="2">Alemania</option>
+										   	<option value="3">Rusia</option>
+										   	<option value="4">España</option>
+										   	<option value="5">Italia</option>
+									   </select>
+								    </div>
+
+									<div class="form-group minimal ">
+									    <label for="birdthname">Fecha de nacimiento</label>
+									    <input type="text" class="form-control" id="birdthname" >
+									     <span class="message"></span>
+								    </div>
+									<div class="form-group minimal ">
+									    <label for="email">Email</label>
+									    <input type="email" class="form-control" id="email" placeholder="email@email.com">
+									    <span class="message"></span>
+								    </div>
+									<div class="form-group minimal ">
+									    <label for="lang">Idioma</label>
+									   <select class="js-example-placeholder-multiple js-states form-control" id="lang" multiple="multiple">
+										   	<option value="0">Inglés</option>
+										   	<option value="1">Francés</option>
+										   	<option value="2">Aleman</option>
+										   	<option value="3">Ruso</option>
+										   	<option value="4">Español</option>
+										   	<option value="5">Italiano</option>
+									   </select>
+								    </div>
+							    </div>
+							</div>
+							<div class="col-4 blockx3" >
+								
+								<div class="form-grey-column " >
+									<div class="form-group minimal ">
+									    <label for="titulo">Título</label>
+									    <input type="text" class="form-control" id="titulo" placeholder="Título académico">
+									    <span class="message"></span>
+								    </div>
+									<div class="form-group minimal ">
+									    <label for="univ">Universidad</label>
+									    <input type="text" class="form-control" id="univ" placeholder="Tu universidad">
+									    <span class="message"></span>
+								    </div>
+									<div class="form-group minimal autocomplete">
+										<label for="graduat">Año de egreso</label>
+										<input type="text" class="form-control" id="graduat" placeholder="Año">
+										<span class="message"></span>
+									</div>
+									
+									<div class="form-group minimal ">
+									    <label for="doc">Matriculas</label>
+									    <input class="tagsinput form-control w-100" value="" placeholder="Número de tu/s matricula/s" />
+									    <span class="message"></span>
+								    </div>
+								    <div class="form-group minimal ">
+									    <label for="doc">Test Select2 Tagging</label>
+									     <select class="js-example-placeholder-multiple js-states form-control" id="test" multiple="multiple">
+									   </select>
+								    </div>
+									<div class="form-group minimal ">
+									    <label for="espec">Especialidades</label>
+									   <select class="js-example-placeholder-multiple js-states form-control" id="espec" multiple="multiple">
+										   	<option value="0">Anestesiología</option>
+										   	<option value="1">Atención Primaria</option>
+										   	<option value="2">Cardiología</option>
+										   	<option value="3">Ciencias de la actividad física</option>
+										   	<option value="4">Cirugía General</option>
+										   	<option value="5">Cuidados Intensivos </option>
+										   	<option value="6">Cuidados Paliativos</option>
+										   	<option value="7">Dermatología</option>
+										   	<option value="8">Ecografía</option>
+									   </select>
+									    <p class="small">Podrá contar con más de una especialidad e interactuar con varias salas de espera</p>
+								    </div>
+								    <div class="form-group minimal">
+								    	<label for="cv">Adjuntar cv en word o pdf</label>
+								    	<div class="input-file bordered">
+											<input type="file" name="input-file-cv[]" id="input-file-cv" class="inputfile d-none" data-multiple-caption="{count} files selected" multiple />
+											<label class="file-btn" for="input-file-cv">
+												<span class="file-uploaded"></span> 
+												<div class="file-input-title"> Explorar</div>
+											</label>
+										</div>
+								    	
+								    </div>
+								     
+								   
+								</div>
+							</div>
+							<div class="col-4 blockx3" >
+								
+								<div class="form-grey-column" >
+									<div class="form-group minimal ">
+									    <label for="cuit">Cuit</label>
+									    <input type="text" class="form-control" id="cuit" placeholder="Tu número de cuit sin espacios ni guiones">
+									    <span class="message"></span>
+								    </div>
+								    <div class="form-group minimal ">
+									    <label for="bank">Entidad bancaria</label>
+									    <input type="text" class="form-control" id="bank" placeholder="Tu Banco">
+									    <span class="message"></span>
+								    </div>
+								    <div class="form-group minimal ">
+									    <label for="accountbanktype">Tipo de cuenta</label>
+									    <input type="text" class="form-control" id="accountbanktype" placeholder="Ej: Caja de ahorro en pesos">
+									    <span class="message"></span>
+								    </div>
+								  
+								    <!--BUTTON GROUP CBU/ALIAS-->
+								    		<style>
+										
+										</style>
+										<div class="form-group minimal pt-3">
+
+											<div class="form-button-group">
+											    <div class="btn-item cbu-radio active">
+											    	CBU <input type="radio" checked="checked" name="radio">
+												</div>
+
+												<div class="btn-item alias-radio">
+													Alias <input type="radio" name="radio">
+												</div>
+											</div>
+							    			
+											<!-- Bootstrap CSS -->
+											<div class="tab-content mt-3 d-flex" id="tabContentCbuAlias">
+												
+												<div class="tab-pane col-12 padding-0" id="cbu" style="display: block;">
+												  
+												  	<div class="form-group minimal ">
+													    <label for="cbu">CBU</label>
+													    <input type="text" class="form-control" id="cbu" placeholder="11 dígitos">
+													    <span class="message"></span>
+												    </div>
+														
+											  	</div>
+											  	<div class="tab-pane col-12 padding-0" id="alias" style="display: none;">
+											  		
+												  	<div class="form-group minimal ">
+												  		<label for="cbu">Alias</label>
+												    	<input class="form-control" id="input-alias"  placeholder="Ingresa un alias">
+												    	 <span class="message"></span>
+												  	</div>
+															
+											  	</div>
+											  	
+											</div>
+										</div>
+								    <!--BUTTON GROUP CBU/ALIAS-->
+								     <div class="form-group minimal">
+									    <label for="accountnumber">Número de cuenta</label>
+									    <input type="text" class="form-control" id="accountnumber" placeholder="Tu número de cuenta">
+									    <span class="message"></span>
+								    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container text-right pt-5 pb-5">
+						<!-- funciona tb con <a></a> 
+							<a class=" btn md-btn mx-auto brand-color" href="#">Guardar</a>
+						-->
+						<button class=" btn md-btn mx-auto brand-color" id="save"  onclick="ActiveMsj()" type="button">Guardar</button>
+					</div>
+				</form>
+			</section>
+		</div>
+
+		<!-- Loader -->
+		<div id="container-loader" class="d-none">
+		    <div class="aligner-items">
+				<svg class="lds-message" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><g transform="translate(25 50)"><circle cx="0" cy="0" r="8" fill="#d10018" transform="scale(0.209939 0.209939)"><animateTransform attributeName="transform" type="scale" begin="-0.3333333333333333s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform></circle></g><g transform="translate(50 50)"><circle cx="0" cy="0" r="8" fill="#7e7e7e" transform="scale(0.668805 0.668805)"><animateTransform attributeName="transform" type="scale" begin="-0.16666666666666666s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform></circle></g><g transform="translate(75 50)"><circle cx="0" cy="0" r="8" fill="#cccccc" transform="scale(0.993662 0.993662)"><animateTransform attributeName="transform" type="scale" begin="0s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform></circle></g>
+				</svg>
+			</div>
+		</div>
+		<!-- Loader -->
+		
+		<script src="js/vendor/jquery-3.3.1/jquery.min.js"></script>	
+		<script src="js/vendor/bootstrap-4.3.1/bootstrap.js"></script>
+		<script src="js/vendor/select2-4.0.7/select2.js"></script>
+		<script src="js/vendor/scrollbar/nanoScroller.js"></script>
+   	 	<script src="js/vendor/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+   	 	<script src="js/vendor/IsNuberEntry-1.0.1/jquery.iNumberEntry.js"></script>
+   	 	<script src="js/vendor/customInputFile/custom-input-file.js"></script>
+   	 	<script src="js/vendor/toastr/toastr.min.js"></script>
+		
+		<script>
+			$(document).ready(function() {
+				//Carga por ajax documentacion del plugin acá: https://select2.org/data-sources/ajax
+			    $('#doc-type, #espec, #lang, #nac').select2();
+			    //Escondo la caja de search que trae por defaul => https://select2.org/searching
+			    $('#gender, #doc-type').select2({
+				    minimumResultsForSearch: Infinity
+				});
+			    //Agrego clase css al plugin para personalizar.	
+			    $('.tagsinput').tagsinput({
+                	tagClass: 'label label-primary'
+            	});
+
+			    //Script para formularios => estilos de label on focus in/out
+            	$('.form-group').on('focusin', function(){
+            		$(this).addClass('focus');
+            	}).on('focusout', function(){
+            		var input = $(this).find('.form-control');
+
+        			if(($(input).val().length == 0)){
+        				console.log(input);
+        				$(this).removeClass('focus');
+        			}
+            	});
+
+	        	/*Script para tabs de cbualias*/
+				$(".cbu-radio").on("click", function(e){
+					$(this).addClass("active");
+					$(".alias-radio").removeClass("active")
+					$("#cbu").addClass("active").removeClass("d-none").show();
+					$("#alias").removeClass("active").addClass("d-none").hide();
+				});
+
+				$(".alias-radio").on("click", function(e){
+					$(this).addClass("active");
+					$(".cbu-radio").removeClass("active")
+					$("#alias").addClass("active").removeClass("d-none").show();
+					$("#cbu").removeClass("active").addClass("d-none").hide();
+				});
+
+				
+
+			});
+
+			//Campos de formulario
+			$("#birdthname").iNumberEntry({
+			  numberParts: [
+			    {
+			      length: 2,
+			      postfix: "-",
+			      value: " Día "
+			    },
+			    {
+			      length: 2,
+			      postfix: "-",
+			      value: " Mes "
+			    },
+			    {
+			      length: 4,
+			      value: " Año "
+			    }
+			  ]
+			});
+
+			$("#graduat").iNumberEntry({
+			  numberParts: [
+			    {
+			      length: 4,
+			      value: " Año"
+			    }
+			  ]
+			});
+
+			$("#cuit").iNumberEntry({
+			 numberParts: [
+			    {
+			      length: 2,
+			      postfix: "-",
+			      value: "00"
+			    },
+			    {
+			      length: 8,
+			      postfix: "-",
+			      value: "00000000"
+			    },
+			    {
+			      length: 1,
+			      value: "0"
+			    }
+			  ]
+			});
+
+			$("#tabContentCbuAlias #cbu").iNumberEntry({
+			 numberParts: [
+			    {
+			      length: 3,
+			      postfix: "-",
+			      value: "000"
+			    },
+			    {
+			      length: 4,
+			      postfix: "-",
+			      value: "0000"
+			    },
+			    {
+			      length: 1,
+			      postfix: "-",
+			      value: "0"
+			    },
+			    {
+			      length: 13,
+			       postfix: "-",
+			      value: "0000000000000"
+			    },
+			    {
+			      length: 1,
+			      value: "0"
+			    }
+			  ]
+			});
+
+
+			function ActiveMsj(){
+                toastr.options = {
+                    closeButton: true,
+                    progressBar: true,
+                    "preventDuplicates": true,
+                    "positionClass": "toast-top-center",
+                    showMethod: 'slideDown',
+                    timeOut: 4000
+                };
+                toastr.success('Los datos se actualizaron correctamente');
+			}
+
+			
+		</script>
+		
+	</body>	
+</html>

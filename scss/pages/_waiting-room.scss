@@ -1,0 +1,59 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the login page.
+// -----------------------------------------------------------------------------
+.waiting-room{
+	min-width: 1162px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.branding-group{
+	
+	margin-top:-70px;
+	margin-left:100px;
+	a{
+		padding: $padding-0;
+		margin: 0px;
+	}
+
+}
+
+.brand-icon{
+	fill: $brand-color;
+}
+
+@media (max-width: 767px){
+	.login-btn-group{
+		min-width: 200px;
+	}
+	.login-btn-group .btn{
+		width:100%;
+		
+	}
+}
+
+.modal-dialog{
+		margin: $modal-lg-margin;
+	}
+/* -----------------------------------------------------------------------------*/
+/* This file contains CSS card component section styles.*/
+/* -----------------------------------------------------------------------------*/
+
+
+.card-section{
+	position: absolute;
+	left:     0;
+	right:    0;
+	margin:   auto;
+	top:      100px;
+}
+
+.filler{
+	display: block;
+	height: 210px;
+	background-color: $light-grey-color;
+}
+
+.modal-dialog{
+
+	margin: 0 auto 
+}

@@ -1,0 +1,160 @@
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the navigation only component.
+// -----------------------------------------------------------------------------
+
+
+@media (min-width: 768px){
+	.navbar-default.navbar-scroll{
+		background-color: $brand-color;
+		padding-top: 5px;
+    	padding-bottom: 0px;
+	}
+
+}
+
+.navbar-fixed-top {
+	z-index: $zindex-sticky;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	border-width: 0 0 1px;
+	@include transition(all,1s,ease-out);
+}
+
+.navbar-default .navbar-brand{
+	color: #fff;
+    height: auto;
+    display: block;
+    padding: 10px;
+    
+}
+.navbar-default a,.navbar-default p{
+	font-family: $text-font-stack;
+	font-weight: $normal-font-weight;
+	font-size: 	$t13;
+	letter-spacing: 0.21px;
+	color: $semilight-grey-color;
+	margin:$margin-x1;
+
+	&:focus{
+		outline:none;
+	}
+
+	&.logout{
+		color: $white-color;
+		font-weight: $medium-font-weight;
+		font-size: $t10;
+		letter-spacing: $letter-spacing-one-half;
+		text-transform: uppercase;
+
+		&:hover{
+		color: darken($white-color, 10%);
+		text-decoration:none;
+		@include transition(all,0.3s,ease-out);
+
+		}
+
+		
+	}
+
+
+
+}
+.navbar-default.navbar-scroll a,.navbar-default.navbar-scroll p{
+	color: $white-color;
+	@include transition(all,0.3s,ease-out);
+}
+	
+nav{
+
+	&.sm-nav{
+		height: 85px;
+	}
+	&.md-nav{
+		height: 280px;
+	}
+	&.lg-nav{
+		height: 90vh;
+	}
+}
+
+
+/* navegacion y menu de lang */
+nav li.nav-item, #langNav li.nav-item {
+	
+	margin: $margin-x1;
+
+	&.active a.nav-link{
+		color:$grey-color;
+		font-weight: $bold-font-weight;
+		@include transition(all,1s,ease-out);
+	}
+	
+	a.nav-link{
+		color:$semilight-grey-color;
+		text-transform: uppercase;
+		font-size: $t10;
+		font-weight: $normal-font-weight;
+
+		&:hover{
+			color: $grey-color;
+			@include transition(all,1s,ease-out);
+		}
+		
+
+		@media (max-width: 768px){
+			font-size: $t12;
+			letter-spacing: 1.3px;
+		}
+	}
+
+	.logout{
+		font-family: $text-font-stack;
+		color: $white-color;
+		font-weight: $medium-font-weight;
+		font-size: $t10;
+		letter-spacing: $letter-spacing-one-half;
+		text-transform: uppercase;
+		
+		&:hover{
+			color: darken($white-color, 10%);
+			text-decoration:none;
+			@include transition(all,0.3s,ease-out);
+
+		}
+	}
+
+	
+}
+
+//imagen de la navegación
+nav .img-wrap{
+	display: inline-block;
+    width: 55px;
+    height: 55px;
+}
+
+.avatar{
+	position: absolute;
+	font-family: $text-font-stack;
+	color: white;
+	font-weight: $normal-font-weight;
+	text-align: center;
+	width:100%;
+	height:100%;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.avatar-small{
+    	font-size: $t27;
+    }
+    &.avatar-large{
+    	font-size: $t13;
+    }
+}
+
+// line bottom active link effect for nav tabs and pills 
+@import
+  'components/cool-links';

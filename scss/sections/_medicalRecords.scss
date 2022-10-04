@@ -1,0 +1,339 @@
+/* -----------------------------------------------------------------------------*/
+/* Form medical records section Styles .*/
+/* -----------------------------------------------------------------------------*/
+
+.form-group{
+	margin-bottom:.3em;
+}
+.medical-records{
+	min-height: 86.4vh;
+	padding: .2em 2em;
+
+	form{
+		width:100%;
+	}
+	
+}
+
+#MainPills{
+	padding-bottom: 10px;
+}
+
+.grey-pane{
+	background-color: lighten($light-grey-color, 1%);
+	padding:5px 30px 20px 30px;
+	min-height:350px;
+	max-height:400px;
+	
+
+}
+.medicalRecord-pane{
+	min-height:350px;
+	max-height:400px;
+	
+
+}
+
+.superior-tab-content{
+	height:400px;
+	
+	.scroll-pane {
+		max-height: 300px;
+		overflow-y: auto;
+		overflow-x:hidden;
+	}
+}
+/* ----------------------------------------BOTÓN (PILL) REGISTRAR ATENCIÓN ---------------------------------------------- */
+
+/*  TAB CONDUCTA TERAPEUTICA SOLAPA "1"  */
+
+
+/*  estilos de switch   */
+.container-check{
+	font-size: $t14;
+}
+
+
+.slider:before {
+	  position: absolute;
+	  content: "";
+	  height: 20px;
+	  width: 20px;
+	  left: -2px;
+	  bottom: -2px;
+	  background-color: lighten($light-grey-color, 3%);
+	  transition: .4s;
+	box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.75);
+	}
+	.slider {
+		height: 12px;
+	}
+	.slider:before{
+		height: 15px;
+    	width: 15px;
+    	bottom: -1px;
+	}
+	input:checked+.slider:before{
+		    transform: translateX(29px);
+	}
+
+.classic .bootstrap-tagsinput{
+	background-color: $white-color;
+    border: 1px solid #c6ccd7;
+    padding: 0px;
+    min-height: 25px;
+
+    input{
+    	border:0px;
+    	
+    }
+}
+/*  estilos de etiquetas para especialidad   */
+.specialist .bootstrap-tagsinput{
+	    border:0;
+	    padding:0;
+	    min-height: 25px;
+	    border: 1px solid #c6ccd7;
+
+
+	input{
+		display: block;
+	    padding-left: 15px;
+	    margin: 0px;
+	    order:0;
+	}
+}
+	    
+.light-bordered{
+	.select2-selection.select2-selection--single{
+		height:25px;
+	}
+	#select2-dx-container{
+	 	font-size: $t13;
+	 	background: $white-color;
+	 	height:23px;
+	 	line-height: 24px;
+	 }
+}
+
+
+
+/*  TAB DE ESTUDIO SOLAPA "2"  */
+ #registerAttentionContent .select2-container--default .select2-selection--multiple{
+	border-radius: 0;
+    border: 0;
+    background: $white-color;
+    border: 1px solid #c6ccd7;
+    height: 25px;
+    position:relative;
+    .select2-selection__rendered{
+		position:absolute;
+		top:45px;
+    }
+    
+}
+.select2-container--default .select2-selection--multiple:after{
+	content: "";
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    width: 12px;
+    height: 10px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgMTIgOCI+CiAgICA8cGF0aCBmaWxsPSIjOUI5QjlCIiBmaWxsLXJ1bGU9Im5vbnplcm8iIGQ9Ik0xMC41ODIuNjE5bC42NjguNzM4LTUuNjI1IDYuMDEyTDAgMS4zNTcuNjY4LjYxOWw0Ljk1NyA1LjI3M3oiLz4KPC9zdmc+Cg==);
+    clear: both;
+    background-repeat: no-repeat;
+}
+#tab-b-content .select2-container--default .select2-selection--multiple .select2-selection__choice{
+	margin: 8px;
+}
+#studyType {
+	position: relative;
+
+	.select2-selection__rendered{
+		position: absolute;
+		top:45px;
+	}
+}
+
+
+
+
+.tipo-de-estudio .estudio{
+	margin-left:40px;
+}
+
+#studies, #observationsNotAtt{
+	width:100%;
+	height:150px;
+	outline: none;
+	resize: none;
+	border: 1px solid $light-grey-color-2;
+	background:       $white-color;
+	border-radius:0px;
+	font-family: $text-font-stack;
+  	color: $grey-text-default-color;
+  	font-weight: $normal-font-weight;
+  	font-size: $t15;
+
+	&:focus{
+		 outline: none;
+		 box-shadow: 0 0 0 0.2rem transparent;
+		 border: 1px solid $semilight-grey-color;
+	}
+}
+/*  TAB DE MEDICACION SOLAPA "3"  */
+
+/*  TAB DE NOTAS PRIVADAS SOLAPA "4"  */
+.notes-container{ 	
+    min-height:          350px;
+    border-top:1px solid $light-grey-color-2;
+
+	.note-titles{
+	 	border-right:1px solid $light-grey-color-2;
+
+
+	 	button,input,.note-title{
+	 		padding: 10px 15px;
+	 		background: transparent;
+	 		cursos: pointer;
+
+			&:hover{
+				background: darken($light-grey-color-2, 0.1%);
+				color:              $black-color;
+				font-weight: 		$bold-font-weight;
+				@include transition(all,0.3s,ease-in-out);
+
+				svg{
+					/* fill: lighten($grey-text-default-color, 10%); */
+					@include transition(all,0.3s,ease-in-out);
+				}
+			}
+
+			&:focus, &.focus{
+				outline: 0;
+			}
+	 	}
+
+	 	.note-title{
+	 		width: 100%;
+	 		height: 38px;
+		    background: transparent;
+		    border: 0px;
+		    border-top: 1px solid $light-grey-color-2;
+		    font-family: 		$text-font-stack;
+  			color: 				$black-color;
+  			font-weight: 		$normal-font-weight;
+  			letter-spacing: 	$letter-spacing-half;
+	 		font-size: 			$t13;
+	 		text-overflow: ellipsis;
+  			white-space: nowrap;
+  			overflow: hidden;
+  			cursor: pointer;
+
+  			&::first-letter{
+  				text-transform: uppercase;
+  			}
+
+  			&.selected{
+  				background: $duck-yellow;
+  				@include transition(all,0.3s,ease-in-out);
+  				
+
+  				
+  			}
+	 	}
+
+	 	.icon-remove{
+			width: 38px;
+    		height: 38px;
+			position: absolute;
+			top: 0;
+    		right: 0;
+    		cursor: pointer;
+    		background-color:$warning-color;
+			background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDExIDE0Ij4KICAgIDxwYXRoIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTEwLjQ0NyAxLjM3MlYyLjhILjU1M1YxLjM3MmgyLjQ2NWwuNzMxLS42OTdoMy41MTlsLjczMS42OTdoMi40NDh6TTEuMjUgMTEuOTk3di04LjVoOC41djguNWMwIC4zODUtLjE0Mi43Mi0uNDI1IDEuMDAzYTEuMzcyIDEuMzcyIDAgMCAxLTEuMDAzLjQyNUgyLjY3OGMtLjM4NSAwLS43Mi0uMTQyLTEuMDAzLS40MjVhMS4zNzIgMS4zNzIgMCAwIDEtLjQyNS0xLjAwM3oiLz4KPC9zdmc+Cg==);
+			background-repeat: no-repeat;
+			background-position: center;
+			z-index: 2;
+		}
+
+	 	
+	 	.btn-new-note{
+	 		width:100%;
+	 		background: transparent;
+	 		border:0px;
+	 		text-align: left;
+	 		font-family: $text-font-stack;
+  			color: $grey-text-default-color;
+  			font-weight: $medium-font-weight;
+  			letter-spacing: $letter-spacing-one-half;
+	 		font-size: $t10;
+	 		text-transform:uppercase;
+	 		cursor: pointer;
+	 		display:block;
+
+	 		span.edit-icon{
+	 			fill: $black-color;
+	 			padding-right:1.5em;
+	 		}
+	 	}
+
+	 	
+
+    }
+    .note-content{
+		height:auto;
+
+     	.notes{
+	    	width:100%;
+	    	height:100%;
+	    	outline: none;
+	    	resize: none;
+	    	border:none;
+	    	background:     $white-color;
+	    	padding:        10px 20px;
+	    	font-family: 	$text-font-stack;
+			color: 			$grey-text-default-color;
+			font-weight: 	$normal-font-weight;
+			letter-spacing: $letter-spacing-half;
+			font-size: 		$t13;
+			line-height: 	$t20;
+
+    	}
+	}
+
+}
+
+/*  TAB DE FICHA MEDICA SOLAPA UNICA  */
+.medical-records .phist-padding{
+	padding: 10px 30px;
+}
+.medical-records .top-line.symthom{
+	border: 1px solid;
+	margin-top:2px;
+	border-color: $light-grey-color;
+}
+/*  TAB DE FICHA HISTORIAL DE CONSULTAS SOLAPA UNICA  */
+.medical-records .histories-container{
+	padding: 30px;
+	.table-container{
+		padding:10px 20px;
+		
+		table{
+			background:transparent;
+		}
+	}
+}
+
+.patient-history-container{
+	position: relative;
+
+	.patient-history{
+		padding:20px 30px;
+	}
+}
+.back-container{
+	position: absolute;
+    right: -25px;
+    top: -27px;
+}

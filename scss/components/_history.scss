@@ -1,0 +1,52 @@
+/* -----------------------------------------------------------------------------*/
+/* This file contains CSS history section styles.*/
+/* -----------------------------------------------------------------------------*/
+
+.patient-history{
+
+	.top-line{
+		width:100%;
+		border-top:5px solid $white-color;
+		border-bottom:1px solid $semilight-grey-color;
+
+	}
+	.history-header{
+		background: $light-grey-color;
+		padding: 5px;
+	}
+		
+
+	
+	td{
+		vertical-align: top;
+	}
+
+	.patient-data{
+		font-family: $text-font-stack;
+		color: $grey-color;
+		font-size: $t10;
+		font-weight: $medium-font-weight;
+		letter-spacing:$letter-spacing-one-half;
+		line-height: 1.25em;
+	}
+	.upper-data{
+		@extend .patient-data;
+		text-transform: uppercase;
+	}
+
+	.illness-data{
+		font-family: $text-font-stack;
+		color: $black-color;
+		font-size: $t12;
+		font-weight: $medium-font-weight;
+		letter-spacing:$letter-spacing-half;
+
+	}
+	.notes{
+		font-family: $text-font-stack;
+		color: $semilight-grey-color;
+		font-weight: $normal-font-weight;
+		letter-spacing: 0;
+		font-size: $t13;
+	}
+}

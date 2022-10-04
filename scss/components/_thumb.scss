@@ -1,0 +1,12 @@
+.thumb{
+	
+	position: relative;
+
+	&.rounded-circle{
+		border-radius:50%;
+	}
+
+	&.bordered{
+		border:3px solid white;	
+	}
+}

@@ -1,0 +1,60 @@
+
+@charset 'UTF-8';
+
+
+// 0. Configuration and helpers
+@import
+  'base/variables';
+
+
+// 1. Configuration and helpers
+@import
+  'utils/functions',
+  'utils/mixins';
+
+// 2. Vendors
+@import
+  'vendor/normalize';
+
+// 3. Base stuff
+@import
+  'shared/fonts',
+  'shared/typography',
+  'shared/helpers',
+  'shared/mask',
+  'shared/loader';
+
+// 4. Layout-related sections doesn´t needed
+@import
+  'layout/header';
+
+// 7. Specific components import
+@import
+  'components/button',
+  'components/video-button',
+  'components/scrollbar',
+  'components/input',
+  'components/files',
+  'components/select',
+  'components/checkbox',
+  'components/history',
+  'components/table',
+  'components/switch',
+  'components/pills',
+  'components/tabs',
+  'components/modal',
+  'components/toast',
+  'components/thumb';
+
+
+// 6. Specific section imports
+@import
+  'sections/video',
+  'sections/medicalRecords',
+  'sections/chat';
+
+
+// 5. Specific page imports
+@import
+  'pages/video-conference';
+

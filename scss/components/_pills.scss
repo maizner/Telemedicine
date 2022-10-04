@@ -1,0 +1,47 @@
+/* -----------------------------------------------------------------------------*/
+/* Special main superior buttons / Pills .*/
+/* -----------------------------------------------------------------------------*/
+.nav-pills,.pills{
+
+	.nav-item{
+		
+	padding: 10px 1.5px;
+	
+		
+		.nav-link{
+		background-color: $tab-color;
+		border-radius:0px;
+		height: 100%;
+
+			&.active{
+				background-color: $tab-active-color;
+				@include transition(all,.5s,ease-in-out);
+			}
+
+		}
+	}
+
+
+	.tab-title{
+		font-family: $text-font-stack;
+		color: $white-color;
+		font-weight: $medium-font-weight;
+		font-size: $t17;
+		letter-spacing: $letter-spacing-half;
+		line-height: $t24;
+		margin-bottom:0px;
+		text-transform: initial;
+		text-align: left;
+	}
+
+	.tab-subtitle{
+		font-family: $text-font-stack;
+		color: $white-color;
+		font-weight: $normal-font-weight;
+		font-size: $t11;
+		line-height: $t22;
+		text-align: left;
+		text-transform: initial;
+		margin-bottom:0px;
+	}
+}

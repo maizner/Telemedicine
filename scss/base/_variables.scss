@@ -1,0 +1,303 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3)
+  ),
+  $spacers
+);
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Roboto', sans-serif !default;
+
+/// Main brand color
+/// @type Color
+
+$black-color:              rgb(0, 0, 0);
+$semiblack-color:          rgb(30,36,49);
+$grey-text-default-color:  rgb(67, 76, 95) !default;
+$grey-color:               rgb(88, 99, 119);
+$semidark-grey-color:      rgb(104,104,104);
+$semilight-grey-color:     rgb(142, 142, 147);
+$light-grey-color-2:       rgb(198, 204, 215);
+$light-grey-color:         rgb(239, 239, 244);
+$white-color:              rgb(255, 255, 255);
+
+$brand-color:              rgb(198, 40, 40);
+$warning-color:            rgb(216, 34, 38);
+$info-color:               rgb(0, 173, 230);
+$duck-yellow:              rgb(255, 253, 234);
+$active-green:             rgb(62,204,201);
+$sky-color:                rgb(74,144,226);
+$light-blue-color:         rgb(203,223,247);
+
+
+///font-size
+$base-font-size:16px;
+$t10: 0.625em;
+$t11: 0.6875em;
+$t12: 0.75em;
+$t13: 0.8125em;
+$t14: 0.875em;
+$t15: 0.9375em;
+$t16: 1em;
+$t17: 1.0625em;
+$t19: 1.1875em;
+$t20: 1.25em;
+$t22: 1.375em;
+$t24: 1.5em;
+$t27: 1.6875em;
+$t30: 1.875em;
+$t50: 3.125em;
+
+$letter-spacing-half:     0.03125em;
+$letter-spacing-one:      0.0625em;
+$letter-spacing-one-half: 0.09375em;
+$letter-spacing-two:      0.125em;
+$letter-spacing-two-half: 0.15625em;
+
+///font-weight
+$super-light-font-weight: 100;
+$light-font-weight:       300;
+$normal-font-weight:      400;
+$medium-font-weight:      500;
+$bold-font-weight:        700;
+
+/// Container's maximum width
+/// @type Length
+$narrow-max-width: 1080px;
+$max-width:        1180px !default;
+$max-width-2:      1280px;
+
+/// paddings standard
+$padding-0:  0;
+$padding-y1: 1em 0em 1em 0em;
+$padding-x1: 0em 1em 0em 1em;
+$padding-y2: 2em 0em 2em 0em;
+$padding-x2: 0em 2em 0em 2em;
+$padding-y3: 3em 0em 3em 0em;
+$padding-x3: 0em 3em 0em 3em;
+
+$margin-0:  0;
+$margin-y1: 1em 0em 1em 0em;
+$margin-x1: 0em 1em 0em 1em;
+$margin-y2: 2em 0em 2em 0em;
+$margin-x2: 0em 2em 0em 2em;
+$margin-y3: 3em 0em 3em 0em;
+$margin-x3: 0em 3em 0em 3em;
+
+/*button styles*/
+$sm-padding-btn: 0.9em 2.5em 0.9em 2.5em;
+$md-padding-btn: 1em 2em 1em 2em;
+$lg-padding-btn: 1.3em 4em 1.3em 4em;
+
+$btn-success-bg-color: 			$active-green !default;
+$btn-info-bg-color: 			    $semilight-grey-color !default;
+$btn-warning-bg-color: 				$warning-color !default;
+
+
+$sm-font-size-btn: $t10;
+$md-font-size-btn: $t13;
+$margin-btn:       0em 1em 0em 1em;
+$space-top-btn-1:  2.5em;
+$space-top-btn-2:  4em;
+$space-top-btn-3:  8em;
+
+/*replicado literal de bootstrap*/
+$zindex-dropdown:          1000 !default;
+$zindex-sticky:            1020 !default;
+$zindex-fixed:             1030 !default;
+$zindex-modal-backdrop:    1040 !default;
+$zindex-modal:             1050 !default;
+$zindex-popover:           1060 !default;
+$zindex-tooltip:           1070 !default;
+
+
+//input variables
+$input-border-focus: 		0 0 0 1px rgba(12, 12, 12, 0);
+$input-focus-transparent: 	0 0 0 1px transparent;
+
+//standard AC mask gradient variables
+$mask-ac-gradient-start: 		$brand-color;
+$mask-ac-gradient-2:  			rgba(darken($mask-ac-gradient-start, .9%),1);
+$mask-ac-gradient-3:  			rgba(darken($mask-ac-gradient-2, .19%),0);
+$mask-ac-gradient-end:  		rgba($semidark-grey-color,0);
+
+//standard black mask gradient variables
+$dark-gradient-start: 		rgba($black-color ,7);
+$dark-gradient-2:  			rgba(darken($dark-gradient-start, .15%),1);
+$dark-gradient-3:  			rgba(darken($mask-ac-gradient-2, .19%),0);
+$dark-gradient-end:  		rgba($dark-gradient-start,0);
+
+//table variables
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+$table-color:		          $grey-text-default-color !default;
+$table-cell-padding:          .75rem !default;
+$table-cell-padding-sm:       .3rem !default;
+$border-width: 2px;
+$border-color: 				  $white-color !default;
+
+$table-bg:                    lighten($light-grey-color, 3%)!default;
+$table-accent-bg:             rgba($black-color, .05) !default;
+$table-hover-color:           lighten($black-color, 7.5%) !default;
+$table-hover-bg:              rgba($black-color, .075) !default;
+$table-active-bg:             lighten($black-color, 7.5%) !default;
+
+$table-border-width:          $border-width !default;
+$table-border-color:          $border-color !default;
+
+$table-head-bg:               $light-grey-color !default;
+$table-head-color:            $grey-color !default;
+
+$table-striped-order:         odd !default;
+
+$table-bg-level:              -9 !default;
+$table-border-level:          -6 !default;
+
+
+
+// CHeckbox, radio button and switch elements Variables
+//
+
+$checkbox-padding:      1.5625em;
+$checkbox-margin:       $margin-0;
+$checkbox-width:        1.3em;
+$checkbox-height:       1.3em;
+$checkbox-bg-color:     $white-color;
+$checkbox-border-color: $semiblack-color;
+$checkbox-success-color: $active-green;
+$checkbox-warning-color: $warning-color;
+
+$radio-padding:      1.5625em;
+$radio-margin:       0.75em;
+$radio-width:        1.3em;
+$radio-height:       1.3em;
+$radio-bg-color:     $white-color;
+$radio-border-color: $semiblack-color;
+$radio-active-color: $active-green;
+
+$switch-padding:      1.5625em;
+$switch-margin:       0.75em;
+$switch-width:        1.3em;
+$switch-height:       1.3em;
+
+$switch-active-circle-color:     	$active-green;
+$switch-active-line-color:     		darken($active-green, 5%);
+$switch-inactive-circle-color:     	$white-color;
+$switch-inactive-line-color:     	darken($light-grey-color,15%);
+$enabled-text:     					$white-color;
+
+$switch-active-text:                $black-color;
+$switch-rest-text:					darken($light-grey-color,15%);
+
+
+
+
+//  Card variables
+//
+$card-margin:            1em;
+$card-padding:           1.5em;
+$card-bg-color:          $white-color;
+$card-fixed-height:      21em; 
+$card-title-font-size:   $t22;
+$card-text-font-size:	 $t13;
+$card-title-2-font-size: $t14;
+$card-divider:           6.875em;
+$card-divider-color:     $semilight-grey-color;
+
+//  Card inverse (dark) variables
+//
+$card-bg-inverse-color: $semiblack-color;
+
+//standard AC button group variables
+$button-group-radius: 			0.25em !default; /* 4px */
+$button-group-color:  			$white-color !default;
+$button-group-bg-color:  		$grey-text-default-color !default;
+$button-group-font-size:  		$t13 !default;
+
+//Modal styles
+//
+$modal-backdrop-bg: 				$black-color;
+
+$modal-sm-margin: 					2em auto;
+$modal-lg-margin: 					6em auto;
+$modal-backdrop-opacity: 			0;
+$modal-backdrop-lo-opacity: 		0.2;
+$modal-backdrop-hi-opacity: 		0.8;
+$modal-fade-transform:              translate(0, -50px) !default;
+$modal-show-transform:              none !default;
+$modal-transition:                  transform .3s ease-out !default;
+$modal-border-radius:               0;
+$modal-xs-width:                    30%;
+$modal-sm-width:                    50%;
+$modal-md-width:                    80%;
+$modal-lg-width:                    95%;
+
+
+// Toast styles
+//
+//Pendiente de cambio de color segun diseño
+$toast-message-font-size: 			$t11;
+$toast-title-font-weight: 			$bold-font-weight;
+$toast-text-color: 			        $white-color;
+$toast-bg-color: 			        #030303 !default;
+$toast-success-bg-color: 			$active-green !default;
+$toast-error-bg-color: 			    $warning-color!default;
+$toast-info-bg-color: 			    $semilight-grey-color !default;
+$toast-warning-bg-color: 			$warning-color !default;
+
+//  Tabs pills variables
+//
+$tab-color:                        lighten($semilight-grey-color,5%);
+$tab-active-color:                 $semidark-grey-color;
+
+//  chat variables
+//
+
+$chat-font-size:                   $t13;
+$chat-radius:                      0.32em;
+$chat-baloon-them-bg:                   $white-color;
+$chat-baloon-mine-bg:                  $light-blue-color;
+
+
+
+
+
+//  Footer variables
+//
+
+$footer-height:    9em;
+$footer-bg-color:  lighten($semilight-grey-color, 25%);
+$footer-font-size: $t16;
+$footer-color:     $grey-text-default-color;
+
+
+
+
+$block-gb-color: lighten($light-grey-color, 2.18%);
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;

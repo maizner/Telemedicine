@@ -1,0 +1,328 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the input component.
+// -----------------------------------------------------------------------------
+
+
+//generyc form
+input:-internal-autofill-selected,textarea:-internal-autofill-selected{
+	background-color: transparent !important;
+}
+.form-group{
+	
+
+	textarea{
+		width:100%;
+		height:150px;
+		outline: none;
+		resize: none;
+		border: 1px solid $light-grey-color-2;
+		background:       $white-color;
+		border-radius:0px;
+		font-family: $text-font-stack;
+	  	color: $grey-text-default-color;
+	  	font-weight: $normal-font-weight;
+	  	font-size: $t15;
+
+		&:focus{
+			 outline: none;
+			 box-shadow: 0 0 0 0.2rem transparent;
+			 border: 1px solid $semilight-grey-color;
+		}
+	}
+	//Default input styles
+
+	input[type="text"]:disabled {
+		background-color: rgba($light-grey-color, 0.7) ;	
+	}
+
+	&.minimal{
+	
+		label{
+
+			display: inline-block;
+		 	font-family: $text-font-stack;
+		  	color: $grey-text-default-color;
+		  	font-weight: $bold-font-weight;
+		  	font-size: $t11;
+		  	letter-spacing: $letter-spacing-one-half;
+		  	text-transform: uppercase;
+		  	text-align: center;
+		  	vertical-align: middle;
+		  	background-color: transparent;
+
+		  	@media (min-width: 768px){
+				margin:$margin-0;
+			}
+
+			@media (max-width: 768px){
+				margin:$margin-x1;	
+			}
+
+		}
+
+	 	input,.form-control{
+		
+			font-family: $text-font-stack;
+			color: $grey-text-default-color;
+			font-weight: $normal-font-weight;
+			font-size: $t15;
+			border:0px;
+			@include prefix(border-radius, 0px,moz webkit ms);
+			border-bottom: 1px solid $light-grey-color-2;
+			background: transparent;
+
+			@media (min-width: 768px){
+				padding:0px 1px 0px 1px;
+
+			}
+			@include prefix-placeholder {
+			    font-size: $t14;
+				font-family: $text-font-stack;
+				color: $light-grey-color-2;
+				font-style: italic;
+			}
+
+			&:focus{
+			
+			@include prefix(box-shadow, $input-focus-transparent,moz webkit ms);
+			outline: 0 none;
+			border: 1px solid $grey-color;
+			@include transition(all,0.5s,ease-in-out);
+			} 
+
+		}
+	}
+
+	&.classic{
+	
+		label{
+
+			display: inline-block;
+		 	font-family: $text-font-stack;
+		  	color: $grey-text-default-color;
+		  	font-weight: $normal-font-weight;
+		  	font-size: $t13;
+		  	letter-spacing: $letter-spacing-half;
+		  	text-align: left;
+		  	vertical-align: middle;
+		  	background-color: transparent;
+		  	padding-bottom:3px;
+
+		  	@media (min-width: 768px){
+				margin:$margin-0;
+			}
+			@media (max-width: 768px){
+				margin:$margin-x1;	
+			}
+
+		}
+
+	 	input,.form-control{
+		
+			font-family: $text-font-stack;
+			color: $semiblack-color;
+			font-weight: $normal-font-weight;
+			font-size: $t13;
+			border-bottom: 1px solid $light-grey-color-2;
+			background: $white-color;
+			height: 25px;
+			@include prefix(border-radius, 0px,moz webkit ms);
+
+			
+			@include prefix-placeholder {
+			    font-size: $t13;
+				font-family: $text-font-stack;
+				color: $light-grey-color-2;
+				font-style: italic;
+			}
+
+			&:focus{
+			
+			@include prefix(box-shadow, $input-focus-transparent,moz webkit ms);
+			outline: 0 none;
+			border: 1px solid $grey-color;
+			@include transition(all,0.5s,ease-in-out);
+			} 
+
+		}
+
+		&.rounded-form{
+			
+
+			input,.form-control{
+		
+				@extend .classic;
+				border: 1px solid $light-grey-color;
+				border-radius:30px;
+			}
+		}
+	}
+
+
+
+	a.forgot-psw{
+		cursor:pointer;
+		font-family: $text-font-stack;
+		color: $semilight-grey-color;
+		font-size: $t10;
+		font-weight: $normal-font-weight;
+		letter-spacing: $letter-spacing-one-half;
+		margin:0px;
+		text-transform: uppercase;
+		
+
+		&.up{
+			right:0;
+			bottom:0px;
+		}
+		&.down{
+			right:0;
+			bottom:-20px;
+		}
+
+	}
+	
+
+	&.error input,.error .form-control {
+		
+		@media (min-width: 768px){
+			border-bottom: 1px solid $brand-color !important;
+			@include transition(all,1s,ease-in-out);
+			position: relative;
+		}
+		@media (max-width: 767px){
+			border-bottom: 1px solid $duck-yellow ;
+			@include transition(all,1s,ease-in-out);
+			position: relative;
+
+		}
+		
+	}
+	&.success input,.error .form-control {
+		
+		@media (min-width: 768px){
+		border-bottom: 1px solid $grey-text-default-color !important;
+		@include transition(all,1s,ease-in-out);
+		position: relative;
+		}
+		
+		
+	}
+
+	&.error span.message{
+		font-family: $text-font-stack;
+	  	color: $brand-color;
+	  	font-weight: $normal-font-weight;
+	  	font-size: $t11;
+	  	letter-spacing:0.39px;
+
+	  	@media (max-width: 767px){
+			color: $duck-yellow;
+			
+		}
+
+	  	@media (max-width: 768px){
+			margin:$padding-x1;
+			font-size: $t13;
+		}
+
+	}
+
+	&.success span.message{
+		font-family: $text-font-stack;
+	  	color:       $active-green;
+	  	font-weight: $normal-font-weight;
+	  	font-size: $t11;
+	  	letter-spacing:0.39px;
+
+	  	@media (max-width: 767px){
+			color: $duck-yellow;
+			
+		}
+
+	  	@media (max-width: 768px){
+			margin:$padding-x1;
+			font-size: $t13;
+		}
+
+	}
+
+	
+}
+.form-group.focus{
+	 label{
+		color: $light-grey-color-2;
+		@include transition(all,0.5s,ease-in-out);
+	}
+}
+
+//esto es solo para usar estilos del label classic en otrs ambientes 
+.classic-label{
+	label{
+
+		display: inline-block;
+	 	font-family: $text-font-stack;
+	  	color: $grey-text-default-color;
+	  	font-weight: $normal-font-weight;
+	  	font-size: $t13;
+	  	letter-spacing: $letter-spacing-half;
+	  	text-align: left;
+	  	vertical-align: middle;
+	  	background-color: transparent;
+	  	padding-bottom:3px;
+
+	  	@media (min-width: 768px){
+			margin:$margin-0;
+		}
+		@media (max-width: 768px){
+			margin:$margin-x1;	
+		}
+
+	}
+
+}
+.sm-white-text{
+	@media (max-width: 767px){
+
+		label{
+
+		 	font-family: $text-font-stack;
+		  	color: $white-color;
+		  	font-weight: $bold-font-weight;
+		  	font-size: $t11;
+		  	letter-spacing: $letter-spacing-one-half;
+		}
+		input,.form-control{
+			font-family: $text-font-stack;
+			color: $white-color;
+			font-weight: $light-font-weight;
+
+		}
+	}
+}
+
+//formulario BG imagen 
+
+.bg-image-form{
+	
+	.form-group{
+
+		label{
+	  	color: $white-color;
+	  
+		}
+		input,.form-control{
+		
+		font-family: $text-font-stack;
+		color: $light-grey-color;
+		
+		
+		}
+		a.forgot-psw{
+		color: $light-grey-color;
+		}
+
+	}
+	
+
+}

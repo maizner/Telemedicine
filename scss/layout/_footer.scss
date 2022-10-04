@@ -1,0 +1,14 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.bottom-waitingroom{
+	height:$footer-height;
+	background:$footer-bg-color;
+
+	p{
+		font-family: $text-font-stack;
+		color: $footer-color;
+		font-weight: $normal-font-weight;
+		font-size: $footer-font-size;
+	}
+}

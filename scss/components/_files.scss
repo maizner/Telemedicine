@@ -1,0 +1,84 @@
+.files{
+	font-family: 	$text-font-stack;
+	font-weight: 	$normal-font-weight;
+	letter-spacing: $letter-spacing-half;
+	font-size: 		$t15;
+	line-height: 	$t17;
+	justify-content: space-between;
+
+	a{
+		color: 			$sky-color ;
+	}
+	
+
+	.file{
+		@extend .files;
+		color: 			$sky-color;
+		width:270px;
+		height:45px;
+		display: flex;
+		flex-direction: row;
+		background-color: transparent;
+		
+		outline: 1px solid transparent;
+		cursor: pointer;
+
+		:hover{
+			color: $sky-color;
+			text-decoration: underline;
+			@include transition(all,1s,ease-in-out);
+		}
+		
+
+		.file-text{
+			display: flex;
+			flex-direction: column;
+			justify-content:center;
+			height: 100%;
+			width: 218px;
+			padding: $padding-x1;
+
+		}
+		
+		
+		.icon{
+			width:37px;
+			height:37px;
+			border-radius: 50%;
+			background-color: $sky-color;
+			display: flex;
+			align-self: center;
+			margin-left:15px;
+		}
+		&.image-type .icon{
+
+    		background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxwYXRoIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTUuMDggOS4yNEwyLjE4IDEzaDExLjY0bC0zLjc0LTUtMi45IDMuNzQtMi4xLTIuNXptMTAuNDIgNC41OGMwIC40NTMtLjE2Ny44NDctLjUgMS4xOC0uMzMzLjMzMy0uNzI3LjUtMS4xOC41SDIuMThjLS40NTMgMC0uODQ3LS4xNjctMS4xOC0uNWExLjYxNCAxLjYxNCAwIDAgMS0uNS0xLjE4VjIuMThjMC0uNDUzLjE2Ny0uODQ3LjUtMS4xOC4zMzMtLjMzMy43MjctLjUgMS4xOC0uNWgxMS42NGMuNDUzIDAgLjg0Ny4xNjcgMS4xOC41LjMzMy4zMzMuNS43MjcuNSAxLjE4djExLjY0eiIvPgo8L3N2Zz4K);
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		&.file-type .icon{
+		
+    		background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE1IDE1Ij4KICAgIDxwYXRoIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTEzLjQzOCAwYy40MTYgMCAuNzguMTU2IDEuMDkzLjQ2OS4zMTMuMzEyLjQ2OS42NzcuNDY5IDEuMDk0djExLjg3NGMwIC40MTctLjE1Ni43ODItLjQ2OSAxLjA5NGExLjQ5OSAxLjQ5OSAwIDAgMS0xLjA5NC40NjlIMS41NjNjLS40MTcgMC0uNzgyLS4xNTYtMS4wOTQtLjQ2OUExLjQ5OSAxLjQ5OSAwIDAgMSAwIDEzLjQzN1YxLjU2M0MwIDEuMTQ1LjE1Ni43OC40NjkuNDY4QTEuNDk5IDEuNDk5IDAgMCAxIDEuNTYzIDBoMTEuODc0ek05LjM3NSAxMS44NzVWMTBoLTYuMjV2MS44NzVoNi4yNXptMi41LTMuNDM4VjYuNTYzaC04Ljc1djEuODc1aDguNzV6bTAtMy40MzdWMy4xMjVoLTguNzVWNWg4Ljc1eiIvPgo8L3N2Zz4K);
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		&:hover{
+			outline: 1px solid $sky-color;
+			@include transition(all,0.5s,ease-in-out);
+		}
+
+		&.selected{
+			outline: 1px solid $sky-color;
+			background-color: $light-grey-color;
+		}
+
+
+	}
+
+	.size{
+		@extend .files;
+		font-size:$t13;
+		color: $semilight-grey-color;
+	}
+}

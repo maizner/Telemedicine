@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the login page.
+// -----------------------------------------------------------------------------
+.branding-group{
+	
+	margin-top:-70px;
+	margin-left:100px;
+	a{
+		padding: $padding-0;
+		margin: 0px;
+	}
+
+
+}
+
+.login-form{
+	width: 210px;
+}
+
+@media (max-width: 767px){
+	.login-btn-group{
+		min-width: 200px;
+	}
+	.login-btn-group .btn{
+		width:100%;
+		
+	}
+}

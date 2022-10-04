@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Bienvenido a My ASSIST CARD!</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="css/vendor/bootstrap-4.3.1/bootstrap.css">
+		<link rel="stylesheet" href="css/vendor/select2-4.0.7/core.css">
+		<link rel="stylesheet" href="css/vendor/chardinjs/chardinjs.css">
+		<link rel="stylesheet" href="css/waiting-room.css">
+	
+		
+	</head>
+	<body class="waiting-room">
+		<style>
+			.hero-bg{
+				background: url(img/bg-dashboard.jpg);
+			}
+		</style>
+		<!--Welcome tour -->
+		<a class="margin-0" style="display: block; width:100%;" data-toggle="chardinjs-start" data-intro="You are ready to start seeing patients. Just continue the tour by clicking on the screen or <button class='stop-tour btn sm-btn info d-block ml-auto mt-2 mb-2' data-toggle='chardinjs-stop'>Skip the tour</button>" data-position="bottom"></a>
+		<div class="dashboard">
+			<section class="hero-section position-relative d-flex flex-column">
+				<div class="mask hero-bg"></div>
+				<!-- Esta mascara solo mostrarla si el usuario carga una imagen, sino por defaul esta display none-->
+				<div class="mask ac-mask-left"><div class="mask overlay-mask"></div></div>
+				<!-- Esta mascara solo mostrarla si el usuario carga una imagen-->
+				<section class="navigation">
+					<header>
+						<nav class="navbar navbar-default md-nav navbar-expand-md d-flex align-items-baseline" role="navigation">
+							<div class=" d-flex col-12 container-fluid margin-0 pt-1">
+								<div class="d-flex flex-column col-5 padding-0">
+								   	<a class="margin-0" href="#">
+								    	<img src="img/logo-b.png" width="192" height="51" alt="Assist Card">
+								  	</a>
+							  	</div>
+					
+							    <form class="login-btn-group ml-auto bg-image-form ">
+							    	<div class="d-flex align-items-center">
+										<button class="take-a-tour btn sm-btn brand-color d-block ml-auto" data-toggle="chardinjs-start" >
+								      		Take a tour
+								      	</button>
+								      	<a href="#" class="logout">
+								      		<span class="pr-2">
+								      			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21">
+												    <path fill="#FFF" fill-rule="evenodd" d="M2.285 10.875L4.59 13.16c.117.13.176.28.176.45 0 .169-.059.318-.176.449a.89.89 0 0 1-.215.127.605.605 0 0 1-.234.048.605.605 0 0 1-.235-.048.89.89 0 0 1-.215-.127L0 10.269 3.691 6.48a.617.617 0 0 1 .898 0 .596.596 0 0 1 .177.44.596.596 0 0 1-.176.44L2.324 9.624h10.781c.183 0 .332.059.45.176a.608.608 0 0 1 .175.449.617.617 0 0 1-.625.625H2.285zM18.75.25c.339 0 .632.12.879.361S20 1.148 20 1.5V19c0 .352-.124.648-.371.889-.247.24-.54.361-.879.361H8.125c-.352 0-.648-.12-.889-.361A1.208 1.208 0 0 1 6.875 19v-5.645h1.25v4.883c0 .209.075.388.225.537.15.15.328.225.537.225h9.101a.701.701 0 0 0 .528-.225.75.75 0 0 0 .214-.537l-.02-15.976a.75.75 0 0 0-.214-.537.701.701 0 0 0-.527-.225H8.887a.733.733 0 0 0-.537.225.733.733 0 0 0-.225.537v4.863h-1.25V1.5c0-.352.12-.648.361-.889.241-.24.537-.361.889-.361H18.75z"/>
+												</svg>
+
+								      		</span>
+								      		Cerrar Sesión
+								      	</a>
+								      	<a href="#" class="user">
+								      		<img src="img/thumb55x55.jpg" alt="" width="55" class="rounded-circle bordered thumb">
+								      	</a>
+								      	
+							      	</div>
+							    </form>
+						    </div>
+						  
+						</nav>
+					</header>
+				</section>
+			</section>
+			<div class="filler"></div>
+			<section class="position-absolute card-section fixed"  >
+				
+				<div class="container d-flex justify-content-center">
+					<div class="col-3">
+						<div class="card card-fixed-height card-anchor" data-intro="load the attention data here " data-position="right">
+							<a href="#clinicHistory" id="IC" class="anchor" data-toggle="modal" data-target="#clinicHistory" >
+							    <div class="card-body">
+							    
+							    	<svg xmlns="http://www.w3.org/2000/svg" class="card-icon" width="19" height="22" viewBox="0 0 19 22">
+									    <path  fill-rule="nonzero" d="M16.184 2.534c.538 0 1.013.206 1.424.617.411.412.617.886.617 1.424v14.903c0 .538-.206 1.012-.617 1.424-.411.411-.886.617-1.424.617H2.041c-.538 0-1.013-.206-1.424-.617C.206 20.49 0 20.016 0 19.478V4.575c0-.538.206-1.012.617-1.424.411-.411.886-.617 1.424-.617H6.17A2.85 2.85 0 0 1 7.238.897a2.99 2.99 0 0 1 1.874-.64 2.99 2.99 0 0 1 1.875.64c.554.427.91.973 1.068 1.637h4.13zm-6.36.285a.966.966 0 0 0-.712-.285.966.966 0 0 0-.711.285.966.966 0 0 0-.285.712c0 .285.095.53.285.736.19.205.427.308.711.308a.929.929 0 0 0 .712-.308c.19-.206.285-.451.285-.736a.966.966 0 0 0-.285-.712zm6.503 16.801V4.433h-1.899V7.85H3.797V4.433H1.898V19.62h14.429z"/>
+									</svg>
+
+							      	<h5 class="card-title">Historial Asistencias</h5>
+							      	<p class="card-text">Podrá visualizar el total de las consultas, el tiempo de atención y el ranking de acuerdo a las calificaciones de los pacientes atendidos.</p>
+							      	
+							    </div>
+						    </a>
+					    </div>
+					</div>
+					<div class="col-3">
+						<div class="card card-fixed-height">
+						    <div class="card-body">
+
+						    	<svg xmlns="http://www.w3.org/2000/svg" class="card-icon" width="21" height="21" viewBox="0 0 21 21">
+								    <path fill-rule="nonzero" d="M10.685 5.416v5.322l4.544 2.697-.754 1.288-5.321-3.232V5.416h1.53zm-.535 13.195a7.9 7.9 0 0 0 4.082-1.118 7.87 7.87 0 0 0 2.916-2.916 7.9 7.9 0 0 0 1.118-4.082 7.9 7.9 0 0 0-1.118-4.082 7.87 7.87 0 0 0-2.916-2.916 7.9 7.9 0 0 0-4.082-1.118 7.9 7.9 0 0 0-4.082 1.118 7.87 7.87 0 0 0-2.916 2.916 7.9 7.9 0 0 0-1.118 4.082 7.9 7.9 0 0 0 1.118 4.082 7.87 7.87 0 0 0 2.916 2.916 7.9 7.9 0 0 0 4.082 1.118zm0-18.225c1.847 0 3.556.462 5.127 1.385a9.581 9.581 0 0 1 3.597 3.597 9.942 9.942 0 0 1 1.385 5.127 9.942 9.942 0 0 1-1.385 5.127 9.581 9.581 0 0 1-3.597 3.597 9.942 9.942 0 0 1-5.127 1.385 9.942 9.942 0 0 1-5.127-1.385 9.762 9.762 0 0 1-3.597-3.621 9.897 9.897 0 0 1-1.385-5.103c0-1.83.462-3.532 1.385-5.103a9.949 9.949 0 0 1 3.621-3.62A9.897 9.897 0 0 1 10.15.385z"/>
+								</svg>
+
+						      	<h5 class="card-title">Fin de atención</h5>
+						      	<p class="card-text">Seleccione la hora hasta la que estará atendiendo por hoy.</p>
+						      
+						      	<div class="form-group autocomplete center bordered ">
+									<select id="endService" class="form-control select2-single" tabindex="-1" aria-hidden="true" name="state">
+										<option value="0">10:00</option>
+										<option value="0">10:30</option>
+										<option value="0">11:00</option>
+										<option value="0">11:30</option>
+										<option value="0">12:00</option>
+										<option value="0">12:30</option>
+										<option value="0">13:00</option>
+										<option value="0">13:30</option>
+										<option value="0">...</option>
+										<option value="0">...</option>
+										<option value="0">...</option>
+										<option value="0">...</option>
+										<option value="0">...</option>
+										<option value="0">...</option>
+										<option value="0">...</option>
+									</select>
+								</div>
+						    </div>
+					    </div>
+					</div>
+					<div class="col-3">
+						<div class="card card-fixed-height">
+						    <div class="card-body">
+						    	<svg xmlns="http://www.w3.org/2000/svg" class="card-icon" width="13" height="22" viewBox="0 0 13 22">
+								    <path fill-rule="nonzero" d="M9.302 3.484c-.38.38-.822.57-1.329.57-.506 0-.949-.19-1.328-.57-.38-.38-.57-.823-.57-1.33 0-.506.19-.949.57-1.328.38-.38.822-.57 1.328-.57.507 0 .95.19 1.33.57.379.38.569.822.569 1.329 0 .506-.19.949-.57 1.329zM7.973 9.748l-.949-1.803-.949 2.943 2.705 4.556v6.075H6.977v-4.556l-2.373-3.228-2.706 7.784H0L3.844 6.33l-1.946.76v3.797H0V5.572l5.268-1.804c.127-.031.332-.047.617-.047.601 0 1.092.285 1.471.854L9.492 7.85h3.417v1.898H7.973z"/>
+								</svg>
+						      	<h5 class="card-title">Pacientes en Espera</h5>
+						      	<p class="card-text">Los pacientes en espera serán llamados por todos los médicos atendiendo en la guardia virtual de la pataforma.</p>
+						      	<hr class="divider my-4">
+						      	<div class="number text-center">5</div>
+						    </div>
+					    </div>
+					</div>
+					<div class="col-3">
+						<div class="card card-fixed-height inverse">
+						    <div class="card-body d-flex flex-column justify-content-center">
+						      	<h5 class="card-title-2 text-center ">Atendiendo</h5>
+						      	<!-- Rounded switch -->
+						      	<div class="switch-container mt-5" id="working">
+						      		<span class="switch-text text-uppercase disable active mr-4">No</span>
+									<label class="switch d-block margin-0">
+									  <input type="checkbox" class="switch-checkbox">
+									  <span class="slider round"></span>
+									</label>
+									<span class="switch-text text-uppercase enable text-left ml-4">Si</span>
+								</div>
+								<!-- Rounded switch -->
+						    </div>
+					    </div>
+					</div>
+				</div>
+			</section>
+			
+			<footer  class="bottom-waitingroom">
+				<div class="d-flex flex-row pt-5 container align-items-center" >
+					<div class="col-9">
+						<p class="padding-0 margin-0">El botón <span>Ver próximo</span> paciente te mostrará una vista previa del siguiente en la lista de espera de la guardia virtual.</p>
+					</div>
+					<div class="col-3 text-right">
+						<button class=" btn md-btn mx-auto brand-color sm-margin-y2 " type="submit">Ver Próximo</button>
+					</div>
+				</div>
+			</footer>
+			<!-- Modal -->
+			<div class="modal fade" id="clinicHistory" role="dialog" aria-labelledby="clinicHistoryLabel" aria-hidden="true" >
+			  	<div class="modal-dialog lg-modal" role="document">
+				    <div class="modal-content d-flex">
+				    	<div class="col-6 padding-0 ">
+					      
+						    <div class="modal-body p-4 pr-5">
+							
+						    	<svg xmlns="http://www.w3.org/2000/svg" class="brand-icon mt-1" width="19" height="22" viewBox="0 0 19 22">
+								    <path  fill-rule="nonzero" d="M16.184 2.534c.538 0 1.013.206 1.424.617.411.412.617.886.617 1.424v14.903c0 .538-.206 1.012-.617 1.424-.411.411-.886.617-1.424.617H2.041c-.538 0-1.013-.206-1.424-.617C.206 20.49 0 20.016 0 19.478V4.575c0-.538.206-1.012.617-1.424.411-.411.886-.617 1.424-.617H6.17A2.85 2.85 0 0 1 7.238.897a2.99 2.99 0 0 1 1.874-.64 2.99 2.99 0 0 1 1.875.64c.554.427.91.973 1.068 1.637h4.13zm-6.36.285a.966.966 0 0 0-.712-.285.966.966 0 0 0-.711.285.966.966 0 0 0-.285.712c0 .285.095.53.285.736.19.205.427.308.711.308a.929.929 0 0 0 .712-.308c.19-.206.285-.451.285-.736a.966.966 0 0 0-.285-.712zm6.503 16.801V4.433h-1.899V7.85H3.797V4.433H1.898V19.62h14.429z"/>
+								</svg>
+
+						        <h5 class="modal-title mt-3" id="clinicHistoryLabel">Historial de asistencias</h5>
+						        <div class="padding-0">
+						        	<form action="#" class="form-inline d-flex align-items-end mt-5 justify-content-between">
+						        		<div class="col-4 pl-0">
+								        	<div class="form-group classic center bordered">
+								        		<label for="periodttention" class="tiny-text semilight-grey-color">Selecciona un mes</label>
+
+									        	
+
+												<select style="width:100%;" id="monthAttention" class="form-control select2-single w-100" tabindex="-1" aria-hidden="true" name="state">
+													<option value="0">Enero</option>
+													<option value="0">Febrero</option>
+													<option value="0">Marzo</option>
+													<option value="0">Abril</option>
+													<option value="0">Mayo</option>
+													<option value="0">Junio</option>
+													<option value="0">Julio</option>
+													<option value="0">Agosto</option>
+													<option value="0">Septiembre</option>
+													<option value="0">Octubre</option>
+													<option value="0">Noviembre</option>
+													<option value="0">Diciembre</option>
+													
+												</select>
+
+											</div>
+										</div>
+										<div class="col-4 pl-0">
+											<div class="form-group autocomplete center bordered ">
+												<label for="yearAttention" class="tiny-text semilight-grey-color">Selecciona un año</label>
+												<select style="width:100%;" id="yearAttention" class="form-control select2-single w-100" tabindex="-1" aria-hidden="true" name="state">
+													<option value="0">2000</option>
+													<option value="0">2001</option>
+													<option value="0">2002</option>
+													<option value="0">2003</option>
+													<option value="0">2004</option>
+													<option value="0">2005</option>
+													<option value="0">2006</option>
+													<option value="0">2007</option>
+													<option value="0">2008</option>
+													<option value="0">...</option>
+													<option value="0">...</option>
+													<option value="0">...</option>
+													<option value="0">...</option>
+													<option value="0">...</option>
+													<option value="0">...</option>
+													<option value="0">...</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-4 padding-0">
+											<button type="button" class=" btn full-grey sm-btn margin-0"><span class="pr-2">
+													<svg style="transform: rotate(-90deg);" xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 20 21">
+														<path fill="#FFF" fill-rule="evenodd" d="M2.285 10.875L4.59 13.16c.117.13.176.28.176.45 0 .169-.059.318-.176.449a.89.89 0 0 1-.215.127.605.605 0 0 1-.234.048.605.605 0 0 1-.235-.048.89.89 0 0 1-.215-.127L0 10.269 3.691 6.48a.617.617 0 0 1 .898 0 .596.596 0 0 1 .177.44.596.596 0 0 1-.176.44L2.324 9.624h10.781c.183 0 .332.059.45.176a.608.608 0 0 1 .175.449.617.617 0 0 1-.625.625H2.285zM18.75.25c.339 0 .632.12.879.361S20 1.148 20 1.5V19c0 .352-.124.648-.371.889-.247.24-.54.361-.879.361H8.125c-.352 0-.648-.12-.889-.361A1.208 1.208 0 0 1 6.875 19v-5.645h1.25v4.883c0 .209.075.388.225.537.15.15.328.225.537.225h9.101a.701.701 0 0 0 .528-.225.75.75 0 0 0 .214-.537l-.02-15.976a.75.75 0 0 0-.214-.537.701.701 0 0 0-.527-.225H8.887a.733.733 0 0 0-.537.225.733.733 0 0 0-.225.537v4.863h-1.25V1.5c0-.352.12-.648.361-.889.241-.24.537-.361.889-.361H18.75z"></path>
+													</svg>
+
+												</span>Reporte</button>
+											
+										</div>
+									</form>
+									<div class="container padding-0 mt-5">
+										<h2 class="title-7 black-color mb-3">Última atenciones</h2>
+										<table id="history" class="table table-striped modal-striped-table table-borderless  mb-5">
+					
+										  <tbody>
+										    <tr id="0" data-toggle="modal" data-target="#historyModal" class="selected">
+										      	<td width="50%" class="date">
+											      	12-10-2018
+												</td>
+												<td width="50%"  class="symptom">
+											      	Jorgelina Benancio
+												</td>
+										    </tr>
+										     <tr id="1" data-toggle="modal" data-target="#historyModal">
+										      	<td width="50%" class="date">
+											      	12-10-2018
+												</td>
+												<td width="50%" class="symptom">
+											      	Fernando Longo
+												</td>
+										    </tr>
+										      <tr id="2" data-toggle="modal" data-target="#historyModal">
+										      	<td width="50%" class="date">
+											      	12-10-2018
+												</td>
+												<td width="50%"  class="symptom">
+											      	Ariel Glax
+												</td>
+										    </tr>
+										     <tr id="3" data-toggle="modal" data-target="#historyModal">
+										      	<td width="50%" class="date">
+											      	12-10-2018
+												</td>
+												<td width="50%" class="symptom">
+											      	Federico Gussi
+												</td>
+										    </tr>
+
+					  						<tr id="4" data-toggle="modal" data-target="#historyModal">
+										      	<td width="50%" class="date">
+											      	12-10-2018
+												</td>
+												<td width="50%"  class="symptom">
+											      	Juan Acroix
+												</td>
+										    </tr>
+										     <tr id="5" data-toggle="modal" data-target="#historyModal">
+										      	<td width="50%" class="date">
+											      	12-10-2018
+												</td>
+												<td width="50%" class="symptom">
+											      	Gonzalo Longoni 
+												</td>
+										    </tr>
+										      <tr id="6" data-toggle="modal" data-target="#historyModal">
+										      	<td width="50%" class="date">
+											      	12-10-2018
+												</td>
+												<td width="50%"  class="symptom">
+											      	Jazmin Rizzo
+												</td>
+										    </tr>
+										     <tr id="7" data-toggle="modal" data-target="#historyModal">
+										      	<td width="50%" class="date">
+											      	12-10-2018
+												</td>
+												<td width="50%" class="symptom">
+											      	Maria de lo angeles Luxione 
+												</td>
+										    </tr>
+										      <tr id="8" data-toggle="modal" data-target="#historyModal">
+										      	<td width="50%" class="date">
+											      	12-10-2018
+												</td>
+												<td width="50%"  class="symptom">
+											      	Fiebre
+												</td>
+										    </tr>
+										     <tr id="9" data-toggle="modal" data-target="#historyModal">
+										      	<td width="50%" class="date">
+											      	12-10-2018
+												</td>
+												<td width="50%" class="symptom">
+											      	Juana Nibotti
+												</td>
+										    </tr>
+
+					  						<tr id="10" data-toggle="modal" data-target="#historyModal">
+										      	<td width="50%" class="date">
+											      	12-10-2018
+												</td>
+												<td width="50%"  class="symptom">
+											      	Mercedes Fines
+												</td>
+										    </tr>
+										     <tr id="11" data-toggle="modal" data-target="#historyModal">
+										      	<td width="50%" class="date">
+											      	12-10-2018
+												</td>
+												<td width="50%" class="symptom">
+											      	Angela Gallar 
+												</td>
+										    </tr>
+										  </tbody>
+										</table>
+									</div>
+						        </div>
+					       </div>
+					       
+					    </div>
+					    <div class="col-6 padding-0 border-left">
+					    	<div class="d-flex p-2">
+					      		<button type="button" class="btn back" data-dismiss="modal">Volver</button>
+					      	</div>
+					      	<div class="modal-body p-4 pr-5 patient-history d-flex flex-column">
+					      		<div class="history-header">
+					      			<p class=" title-8 black-color">Jorgelina Benarancio</p>
+					      			<table class="w-100">
+						      			<tr>
+						      				<td class="patient-data w-50">DNI 33386332</td>
+						      				<td class="illness-data w-50">Motivo de la consulta: Dolor de garganta</td>
+						      			</tr>
+						      			<tr>
+						      				<td class="patient-data w-50">20/05/2019 <span>15:44</span></td>
+						      				<td class="illness-data w-50">Enfermedad: Dolor de garganta</td>
+						      			</tr>
+						      			<tr>
+						      				<td class="upper-data w-50">Atendió Dr Longo, Fernando</td>
+						      				<td class="illness-data w-50">Diagnótico: Angina</td>
+						      			</tr>
+						      			
+						      		</table>
+						      	</div>
+						      	<div class="top-line"></div>
+			
+						      		<p class=" title-8 black-color pb-2 pt-1">Conducta terapéutica</p>
+						      		<table class="w-100">
+						      			<tr>
+						      				<td class="tiny-text semilight-grey-color"> Indicaciones: </td>
+						      				<td class="tiny-text black-color"> Clínica médica </td>
+						      			</tr>
+						      			<tr>
+						      				<td class="tiny-text semilight-grey-color"> Signos de alerta: </td>
+						      				<td class="tiny-text black-color"> Fiebre mayor a 38º, decaimiento, sudoración, temblores. </td>
+						      			</tr>
+						      			<tr>
+						      				<td>
+												
+						      					<table class="w-100">
+									      			<tr>
+									      				<td class="tiny-text black-color ckeck-icon p-2 ">No</td>
+									      				<td class="tiny-text black-color ckeck-icon p-2 ">Sin Urgencia</td>
+								      				</tr>
+									      		</table>
+						      				</td>
+						      				<td class="w-50">
+						      					<span class="tiny-text semilight-grey-color">Especialidad:</span>
+							      				<span class="tiny-text black-color">Clínica médica</span>
+							      			</td>
+						      			</tr>
+						      			
+						      		</table>
+
+						      		<div class="top-line"></div>
+						      		<p class=" title-8 black-color pb-2 pt-1">Estudios</p>
+						      		<table class="w-100">
+						      			<tr>
+						      				<td class="tiny-text semilight-grey-color w-50"> Laboratorio </td>
+						      				<td class="tiny-text semilight-grey-color w-50"> Otros</td>
+						      			</tr>
+						      			<tr class="studies">
+						      				<td class="upper-data w-50"> Sangre completo - Orina - Dhl - Sangre completo - Orina - Dhl</td>
+						      				<td class="upper-data w-50"> Electrocardiograma </td>
+						      			</tr>
+						      		</table>
+
+						      		<div class="top-line"></div>
+						      		<p class=" title-8 black-color pb-2 pt-1">Medicación</p>
+						      		<span class="tiny-text semilight-grey-color pb-2 pt-1">Bajo receta</span>
+						      		<table class="w-50">
+						      			<tr>
+						      				<td class="tiny-text black-color ckeck-icon p-2 ">No</td>
+						      				<td class="tiny-text black-color ckeck-icon p-2 ">Sin Urgencia</td>
+					      				</tr>
+						      		</table>
+						      		<table class="w-100">
+						      			<tr>
+						      				<td class="w-50"> 
+						      					<span class="tiny-text semilight-grey-color">Detalle de la prescripción: </span>
+						      					<span class="tiny-text black-color">Ibuprofeno</span>
+						      				</td>
+						      				<td class="w-50"> 
+						      					<span class="tiny-text semilight-grey-color"> Patologías crónicas: </span>
+						      					<span class="tiny-text black-color"> Ulcera </span>
+						      				</td>
+						      			</tr>
+						      			<tr >
+						      				<td class="w-50"> 
+						      					<span class="tiny-text semilight-grey-color">Alergias a medicamentos: </span>
+						      					<span class="tiny-text black-color">Penicilina</span>
+						      				</td>
+						      				<td class="w-50"> 
+						      					<span class="tiny-text semilight-grey-color"> Medicamentos crónicos: </span>
+						      					<span class="tiny-text black-color"> Bronax. Milimex </span>
+						      				</td>
+						      			</tr>
+						      		</table>
+						      		<div class="top-line"></div>
+						      		<p class=" title-8 black-color pb-2 pt-1">Notas privadas</p>
+						      		<p class="notes">Though it is the most prevalent of laser eye surgeries, LASIK has its share of complications. The post-operative complication rate is estimated from 3% to 6%. LASIK eye surgery involves cutting a flap of the corneal tissue with a hinge being left at one end of the flap. The flap is then folded back to reveal the stroma, the middle section of the cornea. After reshaping the corneal tissue with the aid of a high precision laser, typically the excimer laser, the flap is repositioned so as to remain in place by natural adhesion until it heals completely.</p>
+					      		
+					      			<a href="#" class="stop-tour btn sm-btn info d-block ml-auto mt-2 mb-2" download>
+										<span class="pr-2">
+											<svg style="transform: rotate(-90deg);" xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 20 21">
+												<path fill="#FFF" fill-rule="evenodd" d="M2.285 10.875L4.59 13.16c.117.13.176.28.176.45 0 .169-.059.318-.176.449a.89.89 0 0 1-.215.127.605.605 0 0 1-.234.048.605.605 0 0 1-.235-.048.89.89 0 0 1-.215-.127L0 10.269 3.691 6.48a.617.617 0 0 1 .898 0 .596.596 0 0 1 .177.44.596.596 0 0 1-.176.44L2.324 9.624h10.781c.183 0 .332.059.45.176a.608.608 0 0 1 .175.449.617.617 0 0 1-.625.625H2.285zM18.75.25c.339 0 .632.12.879.361S20 1.148 20 1.5V19c0 .352-.124.648-.371.889-.247.24-.54.361-.879.361H8.125c-.352 0-.648-.12-.889-.361A1.208 1.208 0 0 1 6.875 19v-5.645h1.25v4.883c0 .209.075.388.225.537.15.15.328.225.537.225h9.101a.701.701 0 0 0 .528-.225.75.75 0 0 0 .214-.537l-.02-15.976a.75.75 0 0 0-.214-.537.701.701 0 0 0-.527-.225H8.887a.733.733 0 0 0-.537.225.733.733 0 0 0-.225.537v4.863h-1.25V1.5c0-.352.12-.648.361-.889.241-.24.537-.361.889-.361H18.75z"></path>
+											</svg>
+
+										</span>
+										Atención
+									</a >
+					      		
+					      		
+					      	</div>
+				        	
+				        </div>
+				      
+				    </div>
+			  	</div>
+			</div>
+			<!-- Modal -->
+		</div>
+
+		<!-- Loader -->
+		<div id="container-loader" class="d-none">
+		    <div class="aligner-items">
+				<svg class="lds-message" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><g transform="translate(25 50)"><circle cx="0" cy="0" r="8" fill="#d10018" transform="scale(0.209939 0.209939)"><animateTransform attributeName="transform" type="scale" begin="-0.3333333333333333s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform></circle></g><g transform="translate(50 50)"><circle cx="0" cy="0" r="8" fill="#7e7e7e" transform="scale(0.668805 0.668805)"><animateTransform attributeName="transform" type="scale" begin="-0.16666666666666666s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform></circle></g><g transform="translate(75 50)"><circle cx="0" cy="0" r="8" fill="#cccccc" transform="scale(0.993662 0.993662)"><animateTransform attributeName="transform" type="scale" begin="0s" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="0;1;0" keyTimes="0;0.5;1" dur="1s" repeatCount="indefinite"></animateTransform></circle></g>
+				</svg>
+			</div>
+		</div>
+		<!-- Loader -->
+		
+		<script src="js/vendor/jquery-3.3.1/jquery.min.js"></script>	
+		<script src="js/vendor/bootstrap-4.3.1/bootstrap.js"></script>
+		<script src="js/vendor/select2-4.0.7/select2.js"></script>
+		<script src="js/vendor/scrollbar/nanoScroller.js"></script>
+		<script src="js/vendor/chardinjs/chardinjs.min.js"></script>
+		<script src="js/switchToggleColor/switchToggleColor.js"></script>
+		<script>
+			$(document).ready(function() {
+
+				//Para carga dinámica por ajax,la docum del plugin acá => https://select2.org/data-sources/ajax
+			    $('#endService, #yearAttention').select2();
+
+			    //Escondo la caja de search que trae por defaul el plugin para dropdown de pocos elementos => https://select2.org/searching
+			    $('#monthAttention').select2({
+				    minimumResultsForSearch: Infinity
+				});
+				$('#yearAttention').select2();
+							   
+			    //Inicializo plugin select2 para los dropdown y el plugin para el scroll cross browser dentro 
+			    $('.select2').on('click', function(){
+					$(".nano").nanoScroller();
+			 	});
+
+				//Tour
+				$('body').chardinJs({'attribute': 'data-intro'});
+				$('body').chardinJs('start');
+				$('button[data-toggle="chardinjs-start"]').on('click', function(){
+					$('body').chardinJs('start')
+				});
+				$('button[data-toggle="chardinjs-stop"]').on('click', function(){
+					$('body').chardinJs('stop')
+				});
+			});
+			
+			// Add an extra class to the modal backdrop to make it customizable
+			$('#clinicHistory').on('show.bs.modal', function (e) {
+			    setTimeout(function(){
+			       $('.select2-selection__arrow').fadeIn()
+			    });
+			}); 
+
+			// Tabla modal lado izquierdo: Agrego una clase que pinta la fila seleccionada
+			$('.modal-striped-table tr').on('click', function (e) {
+				$('tr').removeClass('selected');
+			    $(this).addClass('selected');
+			});
+
+
+			 //toggleo la clase active para darle color. La funcion estará en js/switchToggleColor
+				switchToggleColor("#working")
+		</script>
+	</body>	
+</html>

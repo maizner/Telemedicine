@@ -1,0 +1,45 @@
+
+@charset 'UTF-8';
+
+
+// 0. Configuration and helpers
+@import
+  'base/variables';
+
+
+// 1. Configuration and helpers
+@import
+  'utils/functions',
+  'utils/mixins';
+
+// 2. Vendors
+@import
+  'vendor/normalize';
+
+// 3. Base stuff
+@import
+  'shared/fonts',
+  'shared/typography',
+  'shared/helpers',
+  'shared/mask',
+  'shared/loader';
+
+// 4. Layout-related sections doesn´t needed
+@import
+  'layout/header';
+
+// 5. Specific page import
+@import
+  'pages/patient-record';
+
+// 5. Specific components import
+@import
+  'components/button',
+  'components/input',
+  'components/select',
+  'components/modal',
+  'components/table',
+  'components/history',
+  'components/thumb';
+
+

@@ -1,0 +1,38 @@
+/* -----------------------------------------------------------------------------*/
+/* tabs panel content styles .*/
+/* -----------------------------------------------------------------------------*/
+
+.superior-tab-content{
+	border: 1px solid $tab-color;
+}
+.secondary-tabs{
+	border:0px;
+
+	.nav-item{
+		border:0px;
+		padding-top: 15px;
+
+		.nav-link{
+
+			border:0px;
+			font-family: $text-font-stack;
+			color: $tab-color;
+			font-weight: $medium-font-weight;
+			font-size: $t10;
+			letter-spacing: $letter-spacing-one-half;
+			line-height: $t24;
+			margin-bottom:0px;
+			text-transform: uppercase;
+			text-align: center;
+			padding: 0px;
+
+			&.active{
+				color: $grey-text-default-color;
+				background: transparent;
+				@include transition(all,.3s,ease-in-out);
+			}
+
+		}
+
+	}
+}

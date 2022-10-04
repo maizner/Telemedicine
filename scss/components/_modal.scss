@@ -1,0 +1,168 @@
+.modal-open {
+  // Kill the scroll on the body
+  overflow: hidden;
+
+  .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+// Container that the modal scrolls within
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $zindex-modal;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  // Prevent Chrome on Windows from adding a focus outline. For details, see
+  // https://github.com/twbs/bootstrap/pull/10951.
+  outline: 0;
+
+
+   .close {
+	    position: absolute;
+	    right:50px;
+	    top: 30px;
+	    font-size: 1rem;
+	    font-weight: 100;
+	    color: $white-color;
+	    width:18px;
+	    height:18px;
+	    text-shadow: none; 
+	    opacity: .5;
+	    cursor:pointer;
+	    background: transparent;
+	    border:0;
+	    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4KICAgIDxwYXRoIGZpbGw9IiM5OTlEQTIiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTE2LjE3Mi4wMzFMMTcuMjUgMS4xMSA5LjcwMyA4LjY1Nmw3LjU0NyA3LjU0Ny0xLjA3OCAxLjA3OC03LjU0Ny03LjU0Ny03LjU0NyA3LjU0N0wwIDE2LjIwM2w3LjU0Ny03LjU0N0wwIDEuMTEgMS4wNzguMDMxbDcuNTQ3IDcuNTQ3eiIvPgo8L3N2Zz4K);
+
+	}
+	.close:hover{
+		opacity: 1;
+		@include transition(all,.5s,ease-out)
+	}
+    	  
+	
+	.ckeck-icon {
+    	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5IiBoZWlnaHQ9IjciIHZpZXdCb3g9IjAgMCA5IDciPgogICAgPHBhdGggZmlsbD0iIzNFQ0NDOSIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMi44OSA2LjM5YS40ODYuNDg2IDAgMCAxLS4zNS4xNTcuNDg2LjQ4NiAwIDAgMS0uMzUzLS4xNTZMMCA0LjIwMy43MDMgMy41IDIuNTQgNS4zMzYgNy40MjIuNDE0bC42NjQuNzAzTDIuODkgNi4zOTF6Ii8+Cjwvc3ZnPgo=);
+        background-repeat: no-repeat;
+    	background-position: left;
+    	padding-left: 15px !important;
+	}
+
+    
+
+
+}
+
+// Modal background
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $zindex-modal-backdrop;
+  width: 100vw;
+  height: 100vh;
+  background-color: $modal-backdrop-bg;
+
+  	// Fade for backdrop
+  	&.fade { opacity: 0; }
+
+  	&.show{ 
+  		opacity: $modal-backdrop-opacity;
+  		@include transition(all,.5s,ease-out) 
+
+  		&.lo{
+		opacity: $modal-backdrop-lo-opacity;
+		@include transition(all,.5s,ease-out) 
+	  	}
+	  	
+	  	&.hi{
+			opacity: $modal-backdrop-hi-opacity;
+	  		@include transition(all,.5s,ease-out) 
+  		}
+  	}
+
+  	
+ 
+}
+
+
+.modal-dialog{
+
+	margin: $modal-lg-margin;
+
+	&.xs-modal{
+		max-width: $modal-xs-width;
+  	}
+	
+	&.sm-modal{
+		max-width: $modal-sm-width;
+  	}
+
+	&.md-modal{
+		max-width: $modal-md-width;
+  	}
+
+
+  	&.lg-modal{
+		max-width: $modal-lg-width;
+  	}
+	   
+	  
+
+	   
+		.back{
+			padding: 0px;
+			margin-right:0px;
+			margin-left:auto;
+		}
+
+	.modal-content{
+		background: 	$white-color;
+		border-radius:  $modal-border-radius;
+		border:0px;
+		box-shadow: 0px 3px 15px 3px rgba($black-color,0.57);
+
+		.modal-body.bordered-body{
+			background-color: lighten($light-grey-color, 3%);
+			padding: 1.5em 2em;
+
+			.white-space{
+				border:1px solid $semilight-grey-color;
+				padding: 1.5em;
+				background: $white-color;
+				
+			}
+
+		}  
+
+		.modal-title{
+			font-family: $text-font-stack;
+			color:       $grey-text-default-color;
+			font-weight: $normal-font-weight;
+			font-size: $t20;
+			letter-spacing: $letter-spacing-half;
+					
+		}
+	}
+
+	 .modal.fade & {
+    	@include transition(all,.5s,ease-out);
+	    transform: $modal-fade-transform;
+	  }
+	  .modal.show & {
+	    transform: $modal-show-transform;
+	  }
+}
+
+
+.sm-modal .bordered-body .white-space{
+	min-height: 550px;
+}
+.xs-modal .bordered-body .white-space{
+	min-height: 200px;
+}

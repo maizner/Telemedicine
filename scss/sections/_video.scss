@@ -1,0 +1,150 @@
+/* -----------------------------------------------------------------------------*/
+/* Video-conference section telemed Styles .*/
+/* -----------------------------------------------------------------------------*/
+.video-box{
+	min-height: 88.3vh;
+	
+	.patient-extract{
+		display: flex;
+		flex-direction:row;
+		font-family: $text-font-stack;
+		color: $white-color;
+		font-weight: $medium-font-weight;
+		font-size: $t10;
+		text-transform: uppercase;
+		letter-spacing: $letter-spacing-one-half;
+		background: $black-color;
+		opacity: 0.7;
+		padding: 8px 20px;
+		position: absolute;
+	    width: 100%;
+	    top: 0;
+	    z-index: 3;
+
+	    .name{
+			white-space: nowrap; 
+			max-width: 200px; 
+			overflow: hidden;
+			text-overflow:ellipsis;
+
+	    }
+
+	    .age{
+			@extend .name;
+			max-width: 50px; 
+	    }
+
+	    .symthom{
+	    	@extend .name;
+			max-width: 320px; 
+	    }
+
+	    .pipe{
+	    	padding-right:7px;
+			&:after{
+	    		content: " | ";
+	    		padding-left:7px;
+	    	}	
+	    	
+	    }
+	}
+
+	.communication-container{
+		display: flex;
+		flex-direction:column;
+		position:relative;
+		z-index: 3;
+		height: 100%;
+
+	
+	.connection{
+		
+		display: flex;
+		width: 100%;
+		padding:5em 3em 0em 3em;
+		justify-content:flex-start;
+		
+			.img-wrap{
+    			width: 100px;
+    			height: 100px;
+				z-index: 2;
+				overflow: hidden;
+				background: hsla(0, 0%, 0%, 0.731);
+			}
+
+			.patient-name{
+				font-family: $text-font-stack;
+				color: $white-color;
+				font-weight: $medium-font-weight;
+				font-size: $t27;
+				text-transform: uppercase;
+				letter-spacing: $letter-spacing-half;
+				margin: $margin-0;
+				text-shadow: 2px 2px 4px rgba($black-color, .8 );
+				max-width: 300px;
+			}
+
+			.conection-status{
+				font-family: $text-font-stack;
+				color: $white-color;
+				font-weight: $light-font-weight;
+				font-size: $t20;
+				text-transform: uppercase;
+				letter-spacing: $letter-spacing-half;
+				margin: $margin-0;
+				text-shadow: 1px 1px 4px $black-color;
+			}
+
+
+		}
+
+		.thumb{
+			max-width:100px;
+		}
+	}
+}
+
+.keypad{
+	position: relative;
+	width: 100%;
+	z-index: 1000;
+	bottom:50px;
+	display: flex;
+    align-self: end;
+    height: 100%;
+    justify-content:center;
+    
+
+    .button-container{
+    	max-width: 510px;
+    	align-items:center;
+
+    }
+
+    .btn-text{
+    	color: $white-color;
+    	letter-spacing: $letter-spacing-half;
+    	font-weight: $normal-font-weight;
+    	font-size: $t14;
+    	margin-top:20px;
+    	margin-bottom:0px;
+
+    	&.clicked{
+    		opacity:0.6;
+    		@include transition(all,.3s,ease-in-out);
+    	}
+    }
+
+ 
+
+}
+.pattern-bg{
+	background-color:$light-grey-color; /* Used if the image is unavailable */
+}
+.video-box.pattern-bg{
+ 
+  height: 100%; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}

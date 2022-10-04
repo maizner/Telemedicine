@@ -1,0 +1,35 @@
+/*nano things */
+/** initial setup **/
+.nano {
+  overflow: hidden !important; }
+
+.nano > .nano-content:focus {
+  outline: thin dotted; }
+
+.nano > .nano-content::-webkit-scrollbar {
+  display: none; }
+
+.has-scrollbar > .nano-content::-webkit-scrollbar {
+  display: block; }
+
+.nano > .nano-pane {
+  background: transparent;
+  position: absolute;
+  width: 8px;
+  right: 5px;
+  top: 0;
+  bottom: 0;
+  opacity: .9;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  border-radius: 5px; }
+
+.nano > .nano-pane > .nano-slider {
+  background: #444;
+  background: rgba(188, 188, 188, 0.8);
+  position: relative;
+  margin: 0 1px;
+  border-radius: 3px; }
+
+/*nano things */
